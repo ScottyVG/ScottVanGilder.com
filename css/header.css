@@ -1,0 +1,126 @@
+.header{
+	height:104px;
+	line-height:104px;
+
+	position:relative;
+
+	cursor:default;
+
+	background:rgb(255,255,255);
+}
+
+.header .logo{
+	display:block;
+
+	position:absolute;
+	top:0px;
+	left:50px;
+
+	font-size:31px;
+	font-family:'lato';
+	font-weight:400;
+
+	color:rgb(25,25,40);
+
+	cursor:pointer;
+}
+
+.header .share{
+	position:absolute;
+	top:0px;
+	right:50px;
+
+	font-size:12px;
+
+	height:100%;
+}
+.header .share a{
+	padding:4px;
+	margin:0px 2px;
+
+	cursor:pointer;
+
+	-webkit-transition:color 200ms;
+	-mos-transition   :color 200ms;
+	-moz-transition   :color 200ms;
+	-o-transition     :color 200ms;
+	transition        :color 200ms;
+}
+.header .share a:hover{
+	color: rgb(238,39,110);
+}
+
+.header .nav{
+	font-size:12px;
+
+	text-align:center;
+}
+.header .nav a{
+	display:inline-block;
+	position:relative;
+
+	margin:0px 20px;
+
+	cursor:pointer;
+
+	-webkit-transition:color 200ms;
+	-mos-transition   :color 200ms;
+	-moz-transition   :color 200ms;
+	-o-transition     :color 200ms;
+	transition        :color 200ms;
+}
+.header .nav a:hover{
+	color:rgb(238,39,110);
+}
+.header .nav a::after{
+	content:'';
+
+	display:block;
+
+	height:0px;
+	background:rgb(238,39,110);
+
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+
+	-webkit-transition:height 200ms;
+	-mos-transition   :height 200ms;
+	-moz-transition   :height 200ms;
+	-o-transition     :height 200ms;
+	transition        :height 200ms;
+}
+.header .nav a:hover::after{
+	height:7px;
+}
+
+@media screen and (max-width:1000px){
+	.header .nav a{
+		margin:0px 10px;
+	}
+}
+@media screen and (max-width:750px){
+	.header .logo{
+		left:25px;
+	}
+
+	.header .nav{
+		padding-right:15px;
+		text-align:right;
+	}
+
+	.header .share{
+		display:none;
+	}
+}
+@media screen and (max-width:450px){
+	.header .logo{
+		position:initial;
+		text-align:center;
+	}
+
+	.header .nav{
+		display:none;
+	}
+}
