@@ -1,14 +1,10 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
 const Projects: React.FC = () => {
   const projects = [
-    {
-      title: 'SVG LABS',
-      description: 'A creative development studio focused on building beautiful and functional web applications.',
-      link: 'http://svglabs.io/',
-      external: true
-    },
     {
       title: 'AWS DevOps',
       description: 'Working as a DevOps Engineer at Amazon Web Services, improving operations performance and application scalability.',

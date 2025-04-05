@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
               Scott Van Gilder
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              Human(attrs=[Father, Husband, DevOps Engineer, Consultant, Nerd])
+            DevOps Engineer, GenAI MLOps SME, High Performance Systems Architect
             </p>
           </div>
         </div>

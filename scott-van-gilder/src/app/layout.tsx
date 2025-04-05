@@ -1,25 +1,26 @@
-import React from 'react';
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Scott Van Gilder',
-  description: 'Scott Van Gilder is a DevOps Engineer working at AWS, dedicated to improving operations performance and application scalability.',
-};
+  description: 'DevOps engineer with a passion for building scalable, cloud-native platforms.',
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} text-gray-900 dark:text-white antialiased`}>
         {children}
       </body>
     </html>
-  );
+  )
 }
+
+export default RootLayout

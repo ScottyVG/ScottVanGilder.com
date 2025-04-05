@@ -1,24 +1,29 @@
+'use client';
+
 import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="py-12 px-4 sm:px-6 lg:px-8">
+    <div id="about" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About</h2>
-        <div className="prose prose-lg text-gray-600 dark:text-gray-300">
-          <p>
-            I'm a DevOps Engineer working at AWS, dedicated to improving operations performance, 
-            increasing application scalability, and maintaining the highest security practices.
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
+        <div className="prose dark:prose-invert max-w-none">
+          <p className="text-gray-600 dark:text-gray-300">
+            I'm a DevOps Engineer at AWS, focused on helping customers build and optimize their cloud infrastructure. 
+            With a deep understanding of cloud-native technologies and automation, I help teams implement efficient, 
+            scalable, and secure solutions.
           </p>
-          <p>
-            With a strong foundation in both front-end and back-end development, I specialize in
-            creating responsive, accessible, and performant web applications using technologies
-            like React, Next.js, TypeScript, and Node.js.
+          <p className="text-gray-600 dark:text-gray-300 mt-4">
+            My expertise includes:
           </p>
-          <p>
-            When I'm not coding, you can find me exploring new technologies, contributing to
-            open-source projects, or sharing my knowledge with the developer community.
-          </p>
+          <ul className="list-disc pl-5 mt-2 text-gray-600 dark:text-gray-300">
+            <li>Cloud Architecture and Infrastructure as Code</li>
+            <li>CI/CD Pipeline Optimization</li>
+            <li>Container Orchestration with Kubernetes</li>
+            <li>Serverless Architecture Design</li>
+            <li>Infrastructure Automation</li>
+            <li>Cloud Security and Compliance</li>
+          </ul>
         </div>
       </div>
     </div>
