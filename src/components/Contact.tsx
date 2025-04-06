@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/scottvangilder"
+              href="https://www.linkedin.com/in/scott-v-91065139/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
               Credly Certifications
             </a>
             <a
-              href="mailto:scott@scottvangilder.com"
+              href="mailto:svangilder@gmail.com"
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               Email

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Hero: React.FC = () => {
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8">
+    <div className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-32 h-32 md:w-40 md:h-40 relative rounded-full overflow-hidden">

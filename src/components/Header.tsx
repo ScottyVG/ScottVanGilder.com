@@ -17,9 +17,6 @@ const Header: React.FC = () => {
             <Link href="#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               About
             </Link>
-            <Link href="#projects" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-              Projects
-            </Link>
             <Link href="#certifications" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               Certifications
             </Link>
