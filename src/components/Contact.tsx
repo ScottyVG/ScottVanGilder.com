@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
             I&apos;m always interested in connecting with fellow technologists and discussing cloud infrastructure, 
             DevOps practices, and software engineering.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-4">
             <a
               href="https://github.com/scottyvg"
               target="_blank"
@@ -28,6 +28,14 @@ const Contact: React.FC = () => {
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               LinkedIn
+            </a>
+            <a
+              href="https://www.credly.com/users/scott-van-gilder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              Credly Certifications
             </a>
             <a
               href="mailto:scott@scottvangilder.com"
