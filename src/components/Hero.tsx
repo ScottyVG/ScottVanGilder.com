@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
               Scott Van Gilder
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              DevOps Engineer and Cloud Infrastructure Architect 
+              DevOps Engineer and Cloud Architect 
             </p>
           </div>
         </div>
