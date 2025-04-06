@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -20,7 +22,7 @@ const Hero: React.FC = () => {
               Scott Van Gilder
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-            DevOps Engineer, GenAI MLOps SME, High Performance Systems Architect
+              DevOps Engineer and Cloud Infrastructure Architect 
             </p>
           </div>
         </div>

@@ -9,7 +9,7 @@ const About: React.FC = () => {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
         <div className="prose dark:prose-invert max-w-none">
           <p className="text-gray-600 dark:text-gray-300">
-            I'm a DevOps Engineer at AWS, focused on helping customers build and optimize their cloud infrastructure. 
+            I&apos;m a DevOps Architect at Amazon Web Services (AWS), focused on helping customers build and optimize their cloud infrastructure. 
             With a deep understanding of cloud-native technologies and automation, I help teams implement efficient, 
             scalable, and secure solutions.
           </p>

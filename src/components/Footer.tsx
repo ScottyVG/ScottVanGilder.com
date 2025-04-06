@@ -3,12 +3,10 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
   return (
-    <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-700">
+    <footer className="py-6 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-3xl mx-auto text-center text-gray-600 dark:text-gray-400">
-        © {currentYear} Scott Van Gilder. All rights reserved.
+        <p>&copy; {new Date().getFullYear()} Scott Van Gilder. All rights reserved.</p>
       </div>
     </footer>
   );
