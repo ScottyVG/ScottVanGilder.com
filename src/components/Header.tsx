@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 const Header: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const Header: React.FC = () => {
             <Link href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               Contact
             </Link>
+            <ThemeToggle />
           </div>
         </div>
       </nav>
