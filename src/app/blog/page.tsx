@@ -17,7 +17,7 @@ export default function BlogPage() {
               Blog
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Thoughts on All Things Tech, DevOps, GenAI, Cloud Infrastructure, and Software Engineering (My opinions are my own)
+              Thoughts on All things Tech, Travel, Outdoor Recreation, and Life in General (My opinions are my own)
             </p>
           </div>
 
