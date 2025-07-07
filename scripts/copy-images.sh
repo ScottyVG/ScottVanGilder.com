@@ -7,7 +7,7 @@ mkdir -p public/images/social
 cp ../images/webdev.svg public/images/
 cp ../images/apps.jpeg public/images/
 cp ../images/coffee.jpeg public/images/
-cp ../images/bw-scott.jpg public/images/
+cp ../images/svg.jpeg public/images/
 cp ../images/aws.jpeg public/images/
 cp ../images/contact.jpg public/images/
 cp ../images/social/linkedin.jpg public/images/social/
