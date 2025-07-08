@@ -11,12 +11,12 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
-    slug: 'welcome-and-thanks-for-stopping-by',
-    title: 'Welcome, and Thanks for Stopping By!',
-    excerpt: 'I\'m Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, and hiking. This blog shares my journey, tech insights, and life out west. Thanks for reading!',
-    date: '2025-07-06',
-    readTime: '2 min read',
-    tags: ['FirstPost', 'BloggingJourney'],
+    slug: 'everything-as-a-lambda-the-swiss-army-knife-of-aws',
+    title: 'Everything as a Lambda: The Swiss Army Knife of AWS',
+    excerpt: 'AWS Lambda isn’t just for APIs—it’s my secret weapon for solving odd problems fast. From custom resource automation to integrating external services like certificate APIs, Lambda acts as my Swiss Army knife in the cloud. In this post, I share how “everything as a Lambda” helps me keep projects efficient, flexible, and fun.',
+    date: '2025-07-10',
+    readTime: '5 minutes',
+    tags: ['AWSLambda', 'Serverless', 'AWS', 'DevOps', 'Containers'],
     author: 'Scott Van Gilder'
   },
   {
@@ -27,7 +27,16 @@ export const blogPosts: BlogPostMeta[] = [
     readTime: "3 min read",
     tags: ['BloggingJourney', 'Tech', 'GenAI', 'DevOps'],
     author: "Scott Van Gilder"
-  }
+  },
+  {
+    slug: 'welcome-and-thanks-for-stopping-by',
+    title: 'Welcome, and Thanks for Stopping By!',
+    excerpt: 'I\'m Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, and hiking. This blog shares my journey, tech insights, and life out west. Thanks for reading!',
+    date: '2025-07-06',
+    readTime: '2 min read',
+    tags: ['FirstPost', 'BloggingJourney'],
+    author: 'Scott Van Gilder'
+  },
 ];
 
 export function getAllPosts(): BlogPostMeta[] {
