@@ -21,7 +21,7 @@ export const blogPosts: Record<string, BlogPost> = {
 
 ## $whoami - Who Am I?
 
-I’m Scott Van Gilder, and I grew up in Jefferson, a small town in Iowa with good roots, great parents, and a wonderful community I’m proud to call home. Jefferson was the kind of place where everyone knew—or at least knew of—everyone else. As a kid, I could ride my single-speed bicycle from one end of town to the other in under ten minutes.
+I’m Scott Van Gilder, and I grew up in Jefferson, a small town in Iowa with good roots, great parents, and a wonderful community I’m proud to call home. Jefferson was the kind of place where everyone knew—or at least knew of—everyone else, and as a kid, I’d ride my single-speed bike from one end of town to the other in under ten minutes. I was endlessly fascinated by all things RC, spending hours tinkering with cars and planes, and I loved building rockets, determined to blast them as close to space as I could launch them. Summers were filled with long days at the pool, competing on the local swim team and occasionally breaking a few records—a time that now feels both close and far away, full of the kind of simple joys that shaped who I am today.
 
 After graduating high school, I left Jefferson to study engineering at Iowa State University in Ames, Iowa. While I enjoyed the challenges of engineering, I ultimately discovered that my true passion lay in programming. I graduated from Iowa State with a Bachelor of Science in Mechanical Engineering, then moved to Boulder, Colorado. There, I found the Galvanize Web Development Immersive program, which helped me build on my basic coding skills and learn industry best practices in software engineering and cloud development.
 
