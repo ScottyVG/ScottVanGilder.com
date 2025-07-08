@@ -1,9 +1,9 @@
 ---
 title: "Everything as a Lambda: The Swiss Army Knife of AWS"
 excerpt: "AWS Lambda isn’t just for APIs—it’s my secret weapon for solving odd problems fast. From custom resource automation to integrating external services like certificate APIs, Lambda acts as my Swiss Army knife in the cloud. In this post, I share how “everything as a Lambda” helps me keep projects efficient, flexible, and fun."
-date: "2025-07-10"
-readTime: "3 minutes"
-tags: ["AWSLambda", "Serverless", "AWS", "DevOps", "Containers", "Layers"]
+date: "2025-07-09"
+readTime: "5 minutes"
+tags: ["AWSLambda", "Serverless", "AWS", "DevOps", "Containers"]
 author: "Scott Van Gilder"
 ---
 
