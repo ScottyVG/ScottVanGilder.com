@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-32 h-32 md:w-40 md:h-40 relative rounded-full overflow-hidden">
             <Image
-              src="/images/ai_svg.jpeg"
+              src="/images/svg.jpg"
               alt="Scott Van Gilder"
               fill
               className="object-cover"
