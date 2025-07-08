@@ -97,10 +97,16 @@ Wrap up your thoughts here.
   console.log(`📝 Markdown file: ${filePath}`);
   console.log(`📊 Updated blog data: ${blogDataPath}`);
   console.log(`\n🔗 URL: /blog/${slug}`);
+  console.log(`\n📸 Adding Images:`);
+  console.log(`1. Add images to: public/images/blog/`);
+  console.log(`2. Use in markdown: ![Alt text](/images/blog/filename.jpg)`);
+  console.log(`3. See BLOG_IMAGES_GUIDE.md for detailed instructions`);
   console.log(`\nNext steps:`);
   console.log(`1. Edit the markdown file to add your content`);
-  console.log(`2. Run 'npm run build' to test`);
-  console.log(`3. Commit and deploy your changes`);
+  console.log(`2. Add any images to public/images/blog/`);
+  console.log(`3. Run 'npm run dev' to test locally`);
+  console.log(`4. Run 'npm run build' to test production build`);
+  console.log(`5. Commit and deploy your changes`);
 
   rl.close();
 }

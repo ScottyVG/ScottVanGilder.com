@@ -30,8 +30,15 @@ export default async function BlogPostPage({ params }: PageProps) {
       <main className="pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Sidebar */}
+            <div className="lg:col-span-1 order-2 lg:order-1">
+              <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded h-64"></div>}>
+                <BlogSidebar tags={tags} archiveData={archiveData} />
+              </Suspense>
+            </div>
+
             {/* Main Content */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 order-1 lg:order-2">
               <div className="mb-8">
                 <Link
                   href="/blog"
@@ -78,17 +85,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
               </div>
 
-              <article className="prose prose-lg dark:prose-invert max-w-none">
+              <article className="prose prose-lg dark:prose-invert max-w-none prose-img:rounded-lg prose-img:shadow-lg prose-img:mx-auto prose-img:my-8">
                 <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
               </article>
             </div>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded h-64"></div>}>
-                <BlogSidebar tags={tags} archiveData={archiveData} />
-              </Suspense>
-            </div>
+
           </div>
         </div>
       </main>

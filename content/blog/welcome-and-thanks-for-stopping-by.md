@@ -1,9 +1,9 @@
 ---
 title: "Welcome, and Thanks for Stopping By!"
-excerpt: "I'm Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, and hiking. This blog shares my journey, tech insights, and life out west. Thanks for reading!"
+excerpt: "I'm Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, hiking, and snowboarding. This blog shares my journey, tech insights, and life out west. Thanks for reading!"
 date: "2025-07-06"
 readTime: "2 min read"
-tags: ["Origin", "Iowan Roots", "Colorado Resident", "Engineering"]
+tags: ["First Post", "About me"]
 author: "Scott Van Gilder"
 ---
 
@@ -15,6 +15,8 @@ After graduating high school, I left Jefferson to study engineering at Iowa Stat
 
 Today, I work as a Professional Services consultant for Amazon Web Services (AWS), helping customers achieve their business goals by delivering tailored DevOps solutions and cloud architectures. It gives me immense pride to know I'm contributing to some of the largest projects in the world and delivering high-quality results at an incredible scale.
 
-When I'm not working, I'm embracing life here in Superior, Colorado, where I live with my wonderful wife and son. Outside the office, you'll often find me enjoying all the typical Colorado outdoor activities—running, biking, hiking, and soaking up the sunshine and mountain air.
+When I'm not working, I'm embracing life here in Superior, Colorado, where I live with my wonderful wife and son. Outside the office, you'll often find me enjoying all the typical Colorado outdoor activities—running, biking, hiking, snowboarding, and soaking up the sunshine and mountain air.
+
+![Scott out snowboarding in Colorado](/images/blog/snowboarding.jpeg)
 
 Thanks again for stopping by my blog. I'm excited to share more about my journey, insights, and the things I'm passionate about. Stay tuned!

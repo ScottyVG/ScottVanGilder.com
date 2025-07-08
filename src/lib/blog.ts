@@ -3,6 +3,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 
 const postsDirectory = path.join(process.cwd(), 'content/blog');
 
@@ -28,7 +30,11 @@ export interface BlogPostMeta {
 }
 
 export async function markdownToHtml(markdown: string): Promise<string> {
-  const result = await remark().use(html).process(markdown);
+  const result = await remark()
+    .use(remarkGfm) // GitHub Flavored Markdown (tables, strikethrough, etc.)
+    .use(remarkBreaks) // Convert line breaks to <br> tags
+    .use(html, { sanitize: false }) // Allow HTML in markdown
+    .process(markdown);
   return result.toString();
 }
 

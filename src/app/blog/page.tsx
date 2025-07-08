@@ -42,8 +42,15 @@ function BlogContent() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Sidebar */}
+        <div className="lg:col-span-1 order-2 lg:order-1">
+          <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded h-64"></div>}>
+            <BlogSidebar tags={tags} archiveData={archiveData} />
+          </Suspense>
+        </div>
+
         {/* Main Content */}
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-3 order-1 lg:order-2">
           <BlogFilters 
             totalPosts={allPosts.length} 
             filteredPosts={filteredPosts.length} 
@@ -127,12 +134,7 @@ function BlogContent() {
           </div>
         </div>
 
-        {/* Sidebar */}
-        <div className="lg:col-span-1">
-          <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded h-64"></div>}>
-            <BlogSidebar tags={tags} archiveData={archiveData} />
-          </Suspense>
-        </div>
+
       </div>
     </div>
   );

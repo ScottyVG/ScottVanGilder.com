@@ -23,10 +23,10 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ className = '', tags, archive
   ];
 
   return (
-    <aside className={`space-y-8 ${className}`}>
+    <aside className={`lg:sticky lg:top-24 space-y-6 ${className}`}>
       {/* Tags Section */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           Browse by Tags
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -57,11 +57,11 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ className = '', tags, archive
       </div>
 
       {/* Archive Section */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           Archive
         </h3>
-        <div className="space-y-2">
+        <div className="space-y-1">
           {archiveData.map(({ year, month, count }) => {
             const isActive = 
               currentYear === year.toString() && 
@@ -84,12 +84,12 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ className = '', tags, archive
         </div>
       </div>
 
-      {/* Recent Posts */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+      {/* Quick Links */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           Quick Links
         </h3>
-        <div className="space-y-2">
+        <div className="space-y-1">
           <Link
             href="/blog"
             className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -97,22 +97,22 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ className = '', tags, archive
             All Posts
           </Link>
           <Link
-            href="/blog?tag=AWS"
+            href="/blog?tag=Tech"
             className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            AWS Posts
+            Tech Posts
           </Link>
           <Link
-            href="/blog?tag=DevOps"
+            href="/blog?tag=Travel"
             className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            DevOps Posts
+            Travel Posts
           </Link>
           <Link
-            href="/blog?tag=Terraform"
+            href="/blog?tag=Outdoors"
             className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            Terraform Posts
+            Outdoor Posts
           </Link>
         </div>
       </div>
