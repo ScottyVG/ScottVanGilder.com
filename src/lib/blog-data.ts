@@ -1,0 +1,91 @@
+// This file contains pre-generated blog data for client-side use
+export interface BlogPostMeta {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  author?: string;
+}
+
+export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'welcome-and-thanks-for-stopping-by',
+    title: 'Welcome, and Thanks for Stopping By!',
+    excerpt: 'I\'m Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, and hiking. This blog shares my journey, tech insights, and life out west. Thanks for reading!',
+    date: '2025-07-06',
+    readTime: '2 min read',
+    tags: ['Origin', 'Iowan Roots', 'Colorado Resident', 'Engineering'],
+    author: 'Scott Van Gilder'
+  }
+];
+
+export function getAllPosts(): BlogPostMeta[] {
+  return blogPosts.sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+}
+
+export function getPostsByTag(tag: string): BlogPostMeta[] {
+  return blogPosts.filter(post => 
+    post.tags.some(postTag => postTag.toLowerCase() === tag.toLowerCase())
+  ).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getAllTags(): { tag: string; count: number }[] {
+  const tagCounts: Record<string, number> = {};
+
+  blogPosts.forEach(post => {
+    post.tags.forEach(tag => {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+  });
+
+  return Object.entries(tagCounts)
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getPostsByDateRange(year?: number, month?: number): BlogPostMeta[] {
+  return blogPosts.filter(post => {
+    const postDate = new Date(post.date);
+    const postYear = postDate.getFullYear();
+    const postMonth = postDate.getMonth() + 1;
+
+    if (year && month) {
+      return postYear === year && postMonth === month;
+    } else if (year) {
+      return postYear === year;
+    }
+    return true;
+  }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getArchiveData(): { year: number; month: number; count: number; posts: BlogPostMeta[] }[] {
+  const archiveMap: Record<string, BlogPostMeta[]> = {};
+
+  blogPosts.forEach(post => {
+    const date = new Date(post.date);
+    const key = `${date.getFullYear()}-${date.getMonth() + 1}`;
+    if (!archiveMap[key]) {
+      archiveMap[key] = [];
+    }
+    archiveMap[key].push(post);
+  });
+
+  return Object.entries(archiveMap)
+    .map(([key, posts]) => {
+      const [year, month] = key.split('-').map(Number);
+      return {
+        year,
+        month,
+        count: posts.length,
+        posts: posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      };
+    })
+    .sort((a, b) => {
+      if (a.year !== b.year) return b.year - a.year;
+      return b.month - a.month;
+    });
+}

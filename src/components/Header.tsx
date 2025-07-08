@@ -23,17 +23,17 @@ const Header: React.FC = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+            <Link href="/#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               About
             </Link>
-            <Link href="#certifications" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+            <Link href="/#certifications" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               Certifications
-            </Link>
-            <Link href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-              Contact
             </Link>
             <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               Blog
+            </Link>
+            <Link href="/#contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+              Contact
             </Link>
             <ThemeToggle />
           </div>
@@ -64,25 +64,18 @@ const Header: React.FC = () => {
           <div className="md:hidden py-2">
             <div className="flex flex-col space-y-2">
               <Link 
-                href="#about" 
+                href="/#about" 
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
-                href="#certifications" 
+                href="/#certifications" 
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-2 py-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Certifications
-              </Link>
-              <Link 
-                href="#contact" 
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-2 py-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
               </Link>
               <Link 
                 href="/blog" 
@@ -91,7 +84,13 @@ const Header: React.FC = () => {
               >
                 Blog
               </Link>
- 
+              <Link 
+                href="/#contact" 
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-2 py-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
               <div className="px-2 py-1">
                 <ThemeToggle />
               </div>
