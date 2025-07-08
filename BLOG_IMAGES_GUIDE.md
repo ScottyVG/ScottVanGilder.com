@@ -204,6 +204,29 @@ For a large header image at the top of your post:
 Your content starts here...
 ```
 
+## 🔗 Links in Blog Posts
+
+### **Link Styling**
+Links in your blog posts are automatically styled with:
+- **Blue color** (`#2563eb`) in light mode
+- **Light blue** (`#60a5fa`) in dark mode
+- **Medium font weight** for better visibility
+- **Smooth hover transitions** with underlines
+- **No underlines by default** for cleaner appearance
+
+### **Link Syntax**
+```markdown
+[Link text](https://example.com)
+[Internal link](https://scottvangilder.com/#contact)
+[Email link](mailto:scott@example.com)
+```
+
+### **Link Best Practices**
+- Use **descriptive link text** (not "click here")
+- **Test external links** to ensure they work
+- Consider **opening external links** in new tabs (handled automatically)
+- Use **relative paths** for internal site links when possible
+
 ---
 
-Your blog now supports beautiful, responsive images that enhance your storytelling and engage your readers!
+Your blog now supports beautiful, responsive images and well-styled links that enhance your storytelling and engage your readers!

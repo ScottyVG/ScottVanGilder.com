@@ -18,6 +18,15 @@ export const blogPosts: BlogPostMeta[] = [
     readTime: '2 min read',
     tags: ['First Post', 'About me'],
     author: 'Scott Van Gilder'
+  },
+  {
+    slug: "why-im-starting-this-blog",
+    title: 'Why I’m Starting This Blog (and Why Now)',
+    excerpt: "I’m finally starting this blog to share my journey through tech, personal projects, and life. GenAI has helped me cut through the noise and just begin writing. Expect a stream of thoughts on cloud development, travel, and the outdoors—and maybe help others along the way. Thanks for joining me on this ride!",
+    date: "2025-07-09",
+    readTime: "3 min read",
+    tags: ['BloggingJourney', 'Tech', 'GenAI', 'DevOps'],
+    author: "Scott Van Gilder"
   }
 ];
 
