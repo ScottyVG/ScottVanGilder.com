@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run sync-blog && next build",
     "start": "next start",
     "lint": "next lint",
+    "sync-blog": "node scripts/sync-blog-data.js",
     "generate-og": "node scripts/generate-og-image.js",
     "generate-favicon": "node scripts/generate-favicon.js",
     "generate-apple-icon": "node scripts/generate-apple-icon.js",

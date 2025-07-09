@@ -71,31 +71,12 @@ Wrap up your thoughts here.
 
   fs.writeFileSync(filePath, frontmatter);
 
-  // Update blog-data.ts
-  const blogDataPath = path.join(process.cwd(), 'src', 'lib', 'blog-data.ts');
-  const blogDataContent = fs.readFileSync(blogDataPath, 'utf8');
-
-  const newPost = `  {
-    slug: '${slug}',
-    title: '${title}',
-    excerpt: '${excerpt}',
-    date: '${date}',
-    readTime: '${readTime}',
-    tags: [${tagsArray.map(tag => `'${tag}'`).join(', ')}],
-    author: 'Scott Van Gilder'
-  }`;
-
-  // Insert the new post at the beginning of the blogPosts array
-  const updatedContent = blogDataContent.replace(
-    /export const blogPosts: BlogPostMeta\[\] = \[/,
-    `export const blogPosts: BlogPostMeta[] = [\n${newPost},`
-  );
-
-  fs.writeFileSync(blogDataPath, updatedContent);
+  // Auto-sync blog data using the sync script
+  const { syncBlogData } = require('./sync-blog-data.js');
+  syncBlogData();
 
   console.log(`\n✅ Blog post created successfully!`);
   console.log(`📝 Markdown file: ${filePath}`);
-  console.log(`📊 Updated blog data: ${blogDataPath}`);
   console.log(`\n🔗 URL: /blog/${slug}`);
   console.log(`\n📅 Date Format: ${date} (YYYY-MM-DD format ensures consistent display)`);
   console.log(`\n📸 Adding Images:`);
