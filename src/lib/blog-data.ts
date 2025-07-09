@@ -14,7 +14,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
-    "slug": "0001-2025-07-06-welcome-and-thanks-for-stopping-by",
+    "slug": "everything-as-a-lambda-the-swiss-army-knife-of-aws",
+    "title": "Everything as a Lambda: The Swiss Army Knife of AWS",
+    "excerpt": "AWS Lambda isn’t just for APIs—it’s my secret weapon for solving odd problems fast. From custom resource automation to integrating external services like certificate APIs, Lambda acts as my Swiss Army knife in the cloud. In this post, I share how “everything as a Lambda” helps me keep projects efficient, flexible, and fun.",
+    "date": "2025-07-08",
+    "readTime": "5 minutes",
+    "tags": [
+      "AWS",
+      "DevOps",
+      "Tech",
+      "AWSLambda",
+      "Serverless"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "welcome-and-thanks-for-stopping-by",
     "title": "Welcome, and Thanks for Stopping By!",
     "excerpt": "I'm Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, hiking, and snowboarding. This blog shares my journey, tech insights, and life out west. Thanks for reading!",
     "date": "2025-07-06",
@@ -27,31 +42,16 @@ export const blogPosts: BlogPostMeta[] = [
     "author": "Scott Van Gilder"
   },
   {
-    "slug": "0002-2025-07-08-why-im-starting-this-blog",
+    "slug": "why-im-starting-this-blog",
     "title": "Why I’m Starting This Blog (and Why Now)",
     "excerpt": "I’m finally starting this blog to share my journey through tech, personal projects, and life. GenAI has helped me cut through the noise and just begin writing. Expect a stream of thoughts on cloud development, travel, and the outdoors—and maybe help others along the way. Thanks for joining me on this ride!",
-    "date": "2025-07-08",
+    "date": "2025-07-07",
     "readTime": "3 min read",
     "tags": [
       "BloggingJourney",
       "Tech",
       "GenAI",
       "DevOps"
-    ],
-    "author": "Scott Van Gilder"
-  },
-  {
-    "slug": "0003-2025-07-08-everything-as-a-lambda-the-swiss-army-knife-of-aws",
-    "title": "Everything as a Lambda: The Swiss Army Knife of AWS",
-    "excerpt": "AWS Lambda isn’t just for APIs—it’s my secret weapon for solving odd problems fast. From custom resource automation to integrating external services like certificate APIs, Lambda acts as my Swiss Army knife in the cloud. In this post, I share how “everything as a Lambda” helps me keep projects efficient, flexible, and fun.",
-    "date": "2025-07-08",
-    "readTime": "5 minutes",
-    "tags": [
-      "AWS",
-      "DevOps",
-      "Tech",
-      "AWSLambda",
-      "Serverless"
     ],
     "author": "Scott Van Gilder"
   }
