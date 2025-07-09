@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # This script helps you find your CloudFront distribution ID
+AWS_PROFILE="default"  # AWS CLI profile to use
 
 # Check if AWS CLI is installed
 if ! command -v aws &> /dev/null; then
@@ -11,7 +12,7 @@ fi
 echo "Finding CloudFront distributions..."
 
 # List all CloudFront distributions
-aws cloudfront list-distributions --query "DistributionList.Items[*].[Id,DomainName,Aliases.Items[0]]" --output table
+aws cloudfront list-distributions --query "DistributionList.Items[*].[Id,DomainName,Aliases.Items[0]]" --output table --profile $AWS_PROFILE
 
 echo ""
 echo "To use a distribution ID in your scripts, update the CLOUDFRONT_DISTRIBUTION_ID variable in:"
