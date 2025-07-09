@@ -1,4 +1,6 @@
 // This file contains pre-generated blog data for client-side use
+import { parseBlogDate } from './date-utils';
+
 export interface BlogPostMeta {
   slug: string;
   title: string;
@@ -41,14 +43,14 @@ export const blogPosts: BlogPostMeta[] = [
 
 export function getAllPosts(): BlogPostMeta[] {
   return blogPosts.sort((a, b) => 
-    new Date(b.date).getTime() - new Date(a.date).getTime()
+    parseBlogDate(b.date).getTime() - parseBlogDate(a.date).getTime()
   );
 }
 
 export function getPostsByTag(tag: string): BlogPostMeta[] {
   return blogPosts.filter(post => 
     post.tags.some(postTag => postTag.toLowerCase() === tag.toLowerCase())
-  ).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  ).sort((a, b) => parseBlogDate(b.date).getTime() - parseBlogDate(a.date).getTime());
 }
 
 export function getAllTags(): { tag: string; count: number }[] {
@@ -67,7 +69,7 @@ export function getAllTags(): { tag: string; count: number }[] {
 
 export function getPostsByDateRange(year?: number, month?: number): BlogPostMeta[] {
   return blogPosts.filter(post => {
-    const postDate = new Date(post.date);
+    const postDate = parseBlogDate(post.date);
     const postYear = postDate.getFullYear();
     const postMonth = postDate.getMonth() + 1;
 
@@ -77,14 +79,14 @@ export function getPostsByDateRange(year?: number, month?: number): BlogPostMeta
       return postYear === year;
     }
     return true;
-  }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }).sort((a, b) => parseBlogDate(b.date).getTime() - parseBlogDate(a.date).getTime());
 }
 
 export function getArchiveData(): { year: number; month: number; count: number; posts: BlogPostMeta[] }[] {
   const archiveMap: Record<string, BlogPostMeta[]> = {};
 
   blogPosts.forEach(post => {
-    const date = new Date(post.date);
+    const date = parseBlogDate(post.date);
     const key = `${date.getFullYear()}-${date.getMonth() + 1}`;
     if (!archiveMap[key]) {
       archiveMap[key] = [];
@@ -99,7 +101,7 @@ export function getArchiveData(): { year: number; month: number; count: number; 
         year,
         month,
         count: posts.length,
-        posts: posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+        posts: posts.sort((a, b) => parseBlogDate(b.date).getTime() - parseBlogDate(a.date).getTime())
       };
     })
     .sort((a, b) => {

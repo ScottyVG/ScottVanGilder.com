@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 import BlogSidebar from '../../components/blog/BlogSidebar';
 import BlogFilters from '../../components/blog/BlogFilters';
 import { getAllPosts, getPostsByTag, getPostsByDateRange, getAllTags, getArchiveData } from '../../lib/blog-data';
+import { formatBlogDate } from '../../lib/date-utils';
 
 function BlogContent() {
   const searchParams = useSearchParams();
@@ -63,15 +64,10 @@ function BlogContent() {
                   key={post.slug}
                   className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow"
                 >
-                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
-                    <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
-                    </time>
-                    <span className="mx-2">•</span>
+                   <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                     <time dateTime={post.date}>
+                       {formatBlogDate(post.date)}
+                     </time>                    <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
                     {post.author && (
                       <>

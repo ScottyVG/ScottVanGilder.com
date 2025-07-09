@@ -97,6 +97,7 @@ Wrap up your thoughts here.
   console.log(`📝 Markdown file: ${filePath}`);
   console.log(`📊 Updated blog data: ${blogDataPath}`);
   console.log(`\n🔗 URL: /blog/${slug}`);
+  console.log(`\n📅 Date Format: ${date} (YYYY-MM-DD format ensures consistent display)`);
   console.log(`\n📸 Adding Images:`);
   console.log(`1. Add images to: public/images/blog/`);
   console.log(`2. Use in markdown: ![Alt text](/images/blog/filename.jpg)`);

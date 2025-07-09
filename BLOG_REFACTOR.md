@@ -138,10 +138,16 @@ Your existing GitHub Actions workflow will work unchanged. The blog is part of t
 ## 📝 Writing Tips
 
 ### Frontmatter Best Practices
-- **Date format**: Use YYYY-MM-DD format
+- **Date format**: Use YYYY-MM-DD format (e.g., "2024-01-15") - ensures consistent display across all pages
 - **Tags**: Use consistent capitalization (e.g., "AWS", "DevOps", "Terraform")
 - **Read time**: Be realistic (aim for ~200 words per minute)
 - **Excerpt**: Keep under 200 characters for best display
+
+### Date Handling
+The blog system uses consistent date parsing to avoid timezone issues:
+- Dates are parsed as local dates (not UTC)
+- Same date displays consistently on blog listing and individual posts
+- Archive navigation works correctly with proper date grouping
 
 ### Content Guidelines
 - Use **markdown headers** (##, ###) for structure

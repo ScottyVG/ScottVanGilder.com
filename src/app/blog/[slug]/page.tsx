@@ -5,6 +5,7 @@ import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import BlogSidebar from '../../../components/blog/BlogSidebar';
 import { getPostBySlug, markdownToHtml, getAllPostSlugs, getAllTags, getArchiveData } from '../../../lib/blog';
+import { formatBlogDate } from '../../../lib/date-utils';
 
 interface PageProps {
   params: {
@@ -52,11 +53,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 
                 <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                   <time dateTime={post.date}>
-                    {new Date(post.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                    {formatBlogDate(post.date)}
                   </time>
                   <span className="mx-2">•</span>
                   <span>{post.readTime}</span>
