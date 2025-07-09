@@ -3,7 +3,7 @@ title: "Welcome, and Thanks for Stopping By!"
 excerpt: "I'm Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, hiking, and snowboarding. This blog shares my journey, tech insights, and life out west. Thanks for reading!"
 date: "2025-07-06"
 readTime: "2 min read"
-tags: ["FirstPost", "BloggingJourney"]
+tags: ["FirstPost", "BloggingJourney", "Tech"]
 author: "Scott Van Gilder"
 ---
 
