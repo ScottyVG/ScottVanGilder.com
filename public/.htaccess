@@ -36,10 +36,15 @@
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
   
-  # Handle blog routes - redirect to blog.html if it exists
-  RewriteRule ^blog/?$ /blog.html [L]
-  RewriteRule ^blog/([^/]+)/?$ /blog/$1.html [L]
+  # Handle blog index route
+  RewriteRule ^blog/?$ /blog/index.html [L]
   
-  # Fallback to index.html for all other routes
-  RewriteRule ^ /index.html [L]
+  # Handle individual blog post routes
+  RewriteRule ^blog/([^/]+)/?$ /blog/$1/index.html [L]
+  
+  # Handle other routes with trailing slash
+  RewriteRule ^([^/]+)/?$ /$1/index.html [L]
+  
+  # Fallback to index.html for root and unmatched routes
+  RewriteRule ^$ /index.html [L]
 </IfModule> 
