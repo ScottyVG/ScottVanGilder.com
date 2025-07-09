@@ -29,6 +29,22 @@ export const blogPosts: BlogPostMeta[] = [
     "author": "Scott Van Gilder"
   },
   {
+    "slug": "rebuilding-scottvangilder-com-from-static-html-to-modern-nextjs",
+    "title": "Rebuilding ScottVanGilder.com: From Static HTML to Modern Next.js - A Vibe Coding Journey",
+    "excerpt": "From bootcamp-era HTML/CSS to a modern Next.js blog with automated deployment - how I rebuilt my personal website in a single evening using AI-assisted development, and what I learned about the balance between GenAI productivity and deep technical understanding.",
+    "date": "2025-07-09",
+    "readTime": "8 min read",
+    "tags": [
+      "WebDev",
+      "NextJS",
+      "GenAI",
+      "PersonalProjects",
+      "AWS",
+      "DevOps"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
     "slug": "welcome-and-thanks-for-stopping-by",
     "title": "Welcome, and Thanks for Stopping By!",
     "excerpt": "I'm Scott Van Gilder, a DevOps consultant at AWS. I grew up in small-town Iowa, studied engineering at Iowa State, and discovered my passion for coding. Now I live in Superior, Colorado, with my wife and son, enjoying running, biking, hiking, and snowboarding. This blog shares my journey, tech insights, and life out west. Thanks for reading!",
