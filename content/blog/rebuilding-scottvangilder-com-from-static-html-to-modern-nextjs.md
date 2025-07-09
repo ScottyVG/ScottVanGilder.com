@@ -3,7 +3,7 @@ title: "Rebuilding ScottVanGilder.com: From Static HTML to Modern Next.js - A Vi
 excerpt: "From bootcamp-era HTML/CSS to a modern Next.js blog with automated deployment - how I rebuilt my personal website in a single evening using AI-assisted development, and what I learned about the balance between GenAI productivity and deep technical understanding."
 date: "2025-07-09"
 readTime: "8 min read"
-tags: ["WebDev", "NextJS", "GenAI", "PersonalProjects", "AWS", "DevOps"]
+tags: ["WebDev", "NextJS", "GenAI", "PersonalProjects", "AWS", "DevOps", "Tech"]
 author: "Scott Van Gilder"
 ---
 
@@ -129,6 +129,6 @@ The technology will keep evolving, and so will our understanding of how to use i
 
 And hey, if you're ever in Steamboat Springs with a sleeping child and a few hours to kill, I highly recommend giving vibe coding a try. You might just rebuild your entire digital presence before bedtime.
 
-<!-- ---
+---
 
-*Want to see the code behind this website? Check out the [GitHub repository](https://github.com/scottyvg/ScottVanGilder.com) to explore the architecture and build processes I've described. And if you're curious about the technical details of any particular feature, feel free to reach out—I love talking about the intersection of AI and software development.* -->
+*Want to see the code behind this website? Check out the [GitHub repository](https://github.com/scottyvg/ScottVanGilder.com) to explore the architecture and build processes I've described. And if you're curious about the technical details of any particular feature, feel free to reach out—I love talking about the intersection of AI and software development.*

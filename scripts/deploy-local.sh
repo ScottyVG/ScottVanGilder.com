@@ -3,10 +3,10 @@
 # This script builds the Next.js app and deploys it to your local S3 bucket for testing
 # Make sure you have AWS CLI configured with the correct credentials
 
-# Variables
-S3_BUCKET_NAME="scottvangilder.com"  # Replace with your actual bucket name
-CLOUDFRONT_DISTRIBUTION_ID="E256LY0L024L6G"  # Replace with your actual distribution ID
-AWS_PROFILE="adminrole"  # AWS CLI profile to use
+# Variables - UPDATE THESE WITH YOUR VALUES
+S3_BUCKET_NAME="your-bucket-name.com"  # Replace with your actual bucket name
+CLOUDFRONT_DISTRIBUTION_ID="YOUR_DISTRIBUTION_ID"  # Replace with your actual distribution ID
+AWS_PROFILE="default"  # AWS CLI profile to use
 
 # Function to check if a command exists
 command_exists() {

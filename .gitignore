@@ -40,8 +40,30 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# SVG Stuff
+# AWS and deployment sensitive files
+access-key.json
+policy.json
+*.key
+*.crt
+
+# OS generated files
 .DS_Store
-node_modules
-scott-van-gilder/node_modules
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
 

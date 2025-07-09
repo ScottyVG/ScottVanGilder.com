@@ -38,3 +38,56 @@ a {
 :focus-visible {
   @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
 }
+
+/* Enhanced prose styling for better readability */
+.prose {
+  @apply leading-relaxed;
+}
+
+.prose p {
+  @apply mb-6 leading-relaxed;
+}
+
+.prose h1 {
+  @apply mt-8 mb-6 leading-tight;
+}
+
+.prose h2 {
+  @apply mt-8 mb-4 leading-tight;
+}
+
+.prose h3 {
+  @apply mt-6 mb-3 leading-tight;
+}
+
+.prose h4, .prose h5, .prose h6 {
+  @apply mt-6 mb-3 leading-tight;
+}
+
+.prose ul, .prose ol {
+  @apply mb-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose blockquote {
+  @apply my-6 pl-6 border-l-4 border-gray-300 dark:border-gray-600 italic;
+}
+
+.prose img {
+  @apply my-8 rounded-lg shadow-sm;
+}
+
+.prose pre {
+  @apply my-6 p-4 rounded-lg overflow-x-auto;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded text-sm;
+}
+
+.prose hr {
+  @apply my-8 border-gray-300 dark:border-gray-600;
+}

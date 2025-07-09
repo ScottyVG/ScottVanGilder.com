@@ -11,7 +11,7 @@ fi
 echo "Finding CloudFront distributions..."
 
 # List all CloudFront distributions
-aws cloudfront list-distributions --query "DistributionList.Items[*].[Id,DomainName,Aliases.Items[0]]" --output table --profile adminrole
+aws cloudfront list-distributions --query "DistributionList.Items[*].[Id,DomainName,Aliases.Items[0]]" --output table
 
 echo ""
 echo "To use a distribution ID in your scripts, update the CLOUDFRONT_DISTRIBUTION_ID variable in:"

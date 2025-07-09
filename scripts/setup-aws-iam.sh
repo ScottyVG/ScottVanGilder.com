@@ -6,7 +6,7 @@
 # Variables
 USER_NAME="github-actions-deployer"
 POLICY_NAME="github-actions-deployment-policy"
-S3_BUCKET_NAME="scottvangilder.com"  # Replace with your actual bucket name
+S3_BUCKET_NAME="your-bucket-name.com"  # Replace with your actual bucket name
 CLOUDFRONT_DISTRIBUTION_ID="E2XXXXXXXXXXXXX"  # Replace with your actual distribution ID
 
 # Check if AWS CLI is installed

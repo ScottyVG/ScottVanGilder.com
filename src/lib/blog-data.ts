@@ -20,11 +20,11 @@ export const blogPosts: BlogPostMeta[] = [
     "date": "2025-07-08",
     "readTime": "5 minutes",
     "tags": [
+      "AWSLambda",
+      "Serverless",
       "AWS",
       "DevOps",
-      "Tech",
-      "AWSLambda",
-      "Serverless"
+      "Tech"
     ],
     "author": "Scott Van Gilder"
   },
@@ -40,7 +40,8 @@ export const blogPosts: BlogPostMeta[] = [
       "GenAI",
       "PersonalProjects",
       "AWS",
-      "DevOps"
+      "DevOps",
+      "Tech"
     ],
     "author": "Scott Van Gilder"
   },
@@ -65,9 +66,9 @@ export const blogPosts: BlogPostMeta[] = [
     "readTime": "3 min read",
     "tags": [
       "BloggingJourney",
-      "Tech",
       "GenAI",
-      "DevOps"
+      "DevOps",
+      "Tech"
     ],
     "author": "Scott Van Gilder"
   }
