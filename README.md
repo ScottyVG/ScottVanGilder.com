@@ -148,7 +148,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - **Live Site**: [scottvangilder.com](https://scottvangilder.com)
 - **Blog**: [scottvangilder.com/blog](https://scottvangilder.com/blog)
-- **LinkedIn**: [Scott Van Gilder](https://linkedin.com/in/scottvangilder)
+- **LinkedIn**: [Scott Van Gilder](https://www.linkedin.com/in/scott-v-91065139/)
 
 ---
 
