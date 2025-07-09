@@ -10,7 +10,9 @@
 ### 2. **Advanced Navigation & Filtering**
 - **Tag-based filtering** - Click any tag to see related posts
 - **Date-based archive** - Browse posts by month/year
-- **Sidebar navigation** with tag cloud and archive
+- **Collapsible sidebar** with directional arrow animations (desktop only)
+- **Dynamic content recentering** when sidebar is collapsed
+- **Persistent collapse state** - remembers your preference across navigation
 - **Filter indicators** showing current filters and post counts
 - **Clear filters** functionality
 

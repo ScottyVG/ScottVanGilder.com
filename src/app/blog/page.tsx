@@ -1,11 +1,11 @@
 'use client';
 
-import React, { Suspense, useMemo } from 'react';
+import React, { useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import BlogSidebar from '../../components/blog/BlogSidebar';
+import BlogLayout from '../../components/blog/BlogLayout';
 import BlogFilters from '../../components/blog/BlogFilters';
 import { getAllPosts, getPostsByTag, getPostsByDateRange, getAllTags, getArchiveData } from '../../lib/blog-data';
 import { formatBlogDate } from '../../lib/date-utils';
@@ -33,6 +33,7 @@ function BlogContent() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Centered Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Blog
@@ -42,96 +43,78 @@ function BlogContent() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        {/* Sidebar */}
-        <div className="lg:col-span-1 order-2 lg:order-1">
-          <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded h-64"></div>}>
-            <BlogSidebar tags={tags} archiveData={archiveData} />
-          </Suspense>
-        </div>
-
-        {/* Main Content */}
-        <div className="lg:col-span-3 order-1 lg:order-2">
+      <BlogLayout tags={tags} archiveData={archiveData}>
+        <>
           <BlogFilters 
             totalPosts={allPosts.length} 
             filteredPosts={filteredPosts.length} 
           />
           
           <div className="space-y-8">
-            {filteredPosts.length > 0 ? (
-              filteredPosts.map((post) => (
-                <article
-                  key={post.slug}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow"
+        {filteredPosts.length > 0 ? (
+          filteredPosts.map((post) => (
+            <article
+              key={post.slug}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow"
+            >
+               <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                 <time dateTime={post.date}>
+                   {formatBlogDate(post.date)}
+                 </time>                    <span className="mx-2">•</span>
+                 <span>{post.readTime}</span>
+               </div>
+              
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <Link 
+                  href={`/blog/${post.slug}`}
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                   <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
-                     <time dateTime={post.date}>
-                       {formatBlogDate(post.date)}
-                     </time>                    <span className="mx-2">•</span>
-                    <span>{post.readTime}</span>
-                    {post.author && (
-                      <>
-                        <span className="mx-2">•</span>
-                        <span>{post.author}</span>
-                      </>
-                    )}
-                  </div>
-                  
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                    <Link 
-                      href={`/blog/${post.slug}`}
-                      className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  {post.title}
+                </Link>
+              </h2>
+              
+              <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                {post.excerpt}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex flex-wrap gap-2">
+                  {post.tags.map((tag) => (
+                    <Link
+                      key={tag}
+                      href={`/blog?tag=${encodeURIComponent(tag)}`}
+                      className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                     >
-                      {post.title}
+                      {tag}
                     </Link>
-                  </h2>
-                  
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.map((tag) => (
-                      <Link
-                        key={tag}
-                        href={`/blog?tag=${encodeURIComponent(tag)}`}
-                        className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-                      >
-                        {tag}
-                      </Link>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
-                  >
-                    Read more
-                    <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </article>
-              ))
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-gray-500 dark:text-gray-400 text-lg">
-                  No posts found matching your criteria.
-                </p>
+                  ))}
+                </div>
+                
                 <Link
-                  href="/blog"
-                  className="mt-4 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+                  href={`/blog/${post.slug}`}
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors"
                 >
-                  View all posts
+                  Read more →
                 </Link>
               </div>
-            )}
+            </article>
+          ))
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-500 dark:text-gray-400 text-lg">
+              No posts found matching your criteria.
+            </p>
+            <Link
+              href="/blog"
+              className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+            >
+              View all posts
+            </Link>
           </div>
-        </div>
-
-
-      </div>
+        )}
+          </div>
+        </>
+      </BlogLayout>
     </div>
   );
 }
