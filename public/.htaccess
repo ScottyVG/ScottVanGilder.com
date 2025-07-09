@@ -25,4 +25,21 @@
 # Compress text files
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# Handle client-side routing for Next.js static export
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Handle existing files and directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # Handle blog routes - redirect to blog.html if it exists
+  RewriteRule ^blog/?$ /blog.html [L]
+  RewriteRule ^blog/([^/]+)/?$ /blog/$1.html [L]
+  
+  # Fallback to index.html for all other routes
+  RewriteRule ^ /index.html [L]
 </IfModule> 
