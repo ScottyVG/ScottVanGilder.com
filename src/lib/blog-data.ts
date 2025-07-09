@@ -14,16 +14,16 @@ export const blogPosts: BlogPostMeta[] = [
     slug: 'everything-as-a-lambda-the-swiss-army-knife-of-aws',
     title: 'Everything as a Lambda: The Swiss Army Knife of AWS',
     excerpt: 'AWS Lambda isn’t just for APIs—it’s my secret weapon for solving odd problems fast. From custom resource automation to integrating external services like certificate APIs, Lambda acts as my Swiss Army knife in the cloud. In this post, I share how “everything as a Lambda” helps me keep projects efficient, flexible, and fun.',
-    date: '2025-07-09',
+    date: '2025-07-08',
     readTime: '5 minutes',
-    tags: ['AWSLambda', 'Serverless', 'AWS', 'DevOps', 'Containers'],
+    tags: ['AWSLambda', 'Serverless', 'AWS', 'DevOps', 'Containers', 'Tech'],
     author: 'Scott Van Gilder'
   },
   {
     slug: "why-im-starting-this-blog",
     title: 'Why I’m Starting This Blog (and Why Now)',
     excerpt: "I’m finally starting this blog to share my journey through tech, personal projects, and life. GenAI has helped me cut through the noise and just begin writing. Expect a stream of thoughts on cloud development, travel, and the outdoors—and maybe help others along the way. Thanks for joining me on this ride!",
-    date: "2025-07-09",
+    date: "2025-07-08",
     readTime: "3 min read",
     tags: ['BloggingJourney', 'Tech', 'GenAI', 'DevOps'],
     author: "Scott Van Gilder"

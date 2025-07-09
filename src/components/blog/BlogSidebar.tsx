@@ -97,22 +97,22 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ className = '', tags, archive
             All Posts
           </Link>
           <Link
-            href="/blog?tag=Tech"
+            href="/blog?tag=AWS"
             className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            Tech Posts
+            AWS Posts
           </Link>
           <Link
-            href="/blog?tag=Travel"
+            href="/blog?tag=GenAI"
             className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            Travel Posts
+            GenAI Posts
           </Link>
           <Link
-            href="/blog?tag=Outdoors"
+            href="/blog?tag=DevOps"
             className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
           >
-            Outdoor Posts
+            DevOps Posts
           </Link>
         </div>
       </div>
