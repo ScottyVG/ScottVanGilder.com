@@ -27,8 +27,6 @@ At the same time, I’m always diving into personal projects, whether it’s exp
 
 Another reason I’m finally jumping in is because generative AI has completely changed how I work and learn. Whether it’s helping me brainstorm a piece of code, generate test data, or even wrangle annoying CSS layouts, GenAI has become my silent collaborator for all the tedious stuff that used to slow me down.
 
-When it comes to writing, I always start with blank page and an idea and only will use AI to help me with gramatical issues, as grammer has never been my strong suit. I also don't want to burden my readers with more AI generated content that doesn't provide a real human perspective.
-
 
 
 ### What This Blog Will Be
