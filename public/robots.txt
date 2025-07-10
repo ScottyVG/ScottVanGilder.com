@@ -1,6 +1,37 @@
-# Allow all crawlers
-User-agent: *
+# Allow major search engines
+User-agent: Googlebot
 Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block all other crawlers and scrapers
+User-agent: *
+Disallow: /
+
+# Crawl delay for allowed bots (1 second between requests)
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://scottvangilder.com/sitemap.xml 
