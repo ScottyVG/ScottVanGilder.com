@@ -20,8 +20,8 @@ export const blogPosts: BlogPostMeta[] = [
     "date": "2025-07-06",
     "readTime": "2 min read",
     "tags": [
-      "FirstPost",
-      "BloggingJourney",
+      "First Post",
+      "Blogging Journey",
       "Tech"
     ],
     "author": "Scott Van Gilder"
@@ -33,7 +33,7 @@ export const blogPosts: BlogPostMeta[] = [
     "date": "2025-07-07",
     "readTime": "3 min read",
     "tags": [
-      "BloggingJourney",
+      "Blogging Journey",
       "GenAI",
       "DevOps",
       "Tech"
@@ -47,7 +47,7 @@ export const blogPosts: BlogPostMeta[] = [
     "date": "2025-07-08",
     "readTime": "5 minutes",
     "tags": [
-      "AWSLambda",
+      "AWS Lambda",
       "Serverless",
       "AWS",
       "DevOps",
@@ -64,11 +64,26 @@ export const blogPosts: BlogPostMeta[] = [
     "tags": [
       "WebDev",
       "NextJS",
-      "GenAI",
-      "PersonalProjects",
+      "Gen AI",
+      "Personal Projects",
       "AWS",
-      "DevOps",
+      "Dev Ops",
       "Tech"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-12-mastering-productivity-with-getting-things-done-a-system-that-actually-works",
+    "title": "Mastering Productivity with Getting Things Done: A System That Actually Works",
+    "excerpt": "Discover how David Allen's Getting Things Done methodology can transform your productivity and mental clarity. Learn the five-step workflow that has helped me achieve successful outcomes in both personal and professional life.",
+    "date": "2025-07-12",
+    "readTime": "8 min read",
+    "tags": [
+      "Productivity",
+      "GTD",
+      "ADHD",
+      "Personal Development",
+      "Time Management"
     ],
     "author": "Scott Van Gilder"
   }

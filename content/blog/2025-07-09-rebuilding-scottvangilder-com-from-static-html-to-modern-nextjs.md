@@ -3,7 +3,7 @@ title: "Rebuilding ScottVanGilder.com: From Static HTML to Modern Next.js - A Vi
 excerpt: "From bootcamp-era HTML/CSS to a modern Next.js blog with automated deployment - how I rebuilt my personal website in a single evening using AI-assisted development, and what I learned about the balance between GenAI productivity and deep technical understanding."
 date: "2025-07-09"
 readTime: "8 min read"
-tags: ["WebDev", "NextJS", "GenAI", "PersonalProjects", "AWS", "DevOps", "Tech"]
+tags: ["WebDev", "NextJS", "Gen AI", "Personal Projects", "AWS", "DevOps", "Tech"]
 author: "Scott Van Gilder"
 ---
 
