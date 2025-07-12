@@ -3,7 +3,7 @@ title: "Mastering Productivity with Getting Things Done: A System That Actually 
 excerpt: "Discover how David Allen's Getting Things Done methodology can transform your productivity and mental clarity. Learn the five-step workflow that has helped me achieve successful outcomes in both personal and professional life."
 date: "2025-07-12"
 readTime: "8 min read"
-tags: ["Productivity", "GTD", "ADHD", "Personal Development", "Time Management"]
+tags: ["Productivity", "GTD", "Personal Development", "Time Management"]
 author: "Scott Van Gilder"
 ---
 
