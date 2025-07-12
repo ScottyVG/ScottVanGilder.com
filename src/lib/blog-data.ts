@@ -67,7 +67,7 @@ export const blogPosts: BlogPostMeta[] = [
       "Gen AI",
       "Personal Projects",
       "AWS",
-      "Dev Ops",
+      "DevOps",
       "Tech"
     ],
     "author": "Scott Van Gilder"
@@ -81,7 +81,6 @@ export const blogPosts: BlogPostMeta[] = [
     "tags": [
       "Productivity",
       "GTD",
-      "ADHD",
       "Personal Development",
       "Time Management"
     ],

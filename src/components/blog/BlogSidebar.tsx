@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { BlogPostMeta } from '../../lib/blog-data';
@@ -26,6 +26,28 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
   const currentTag = searchParams.get('tag');
   const currentYear = searchParams.get('year');
   const currentMonth = searchParams.get('month');
+  
+  const [tagSearch, setTagSearch] = useState('');
+  const [showAllTags, setShowAllTags] = useState(false);
+
+  // Filter and sort tags based on search and display preferences
+  const displayedTags = useMemo(() => {
+    let filteredTags = tags;
+    
+    // Filter by search term if provided
+    if (tagSearch.trim()) {
+      filteredTags = tags.filter(({ tag }) => 
+        tag.toLowerCase().includes(tagSearch.toLowerCase())
+      );
+    }
+    
+    // Show top 10 or all based on toggle
+    if (!showAllTags && !tagSearch.trim()) {
+      filteredTags = tags.slice(0, 10);
+    }
+    
+    return filteredTags;
+  }, [tags, tagSearch, showAllTags]);
 
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -73,6 +95,28 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
             Browse by Tags
           </h3>
+          
+          {/* Tag Search Box */}
+          <div className="mb-4">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search tags..."
+                value={tagSearch}
+                onChange={(e) => setTagSearch(e.target.value)}
+                className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <svg
+                className="absolute right-3 top-2.5 h-4 w-4 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+
           <div className="flex flex-wrap gap-2">
             <Link
               href="/blog"
@@ -84,7 +128,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
             >
               All Posts
             </Link>
-            {tags.map(({ tag, count }) => (
+            {displayedTags.map(({ tag, count }) => (
               <Link
                 key={tag}
                 href={`/blog?tag=${encodeURIComponent(tag)}`}
@@ -98,6 +142,27 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
               </Link>
             ))}
           </div>
+
+          {/* Show More/Less Toggle */}
+          {!tagSearch.trim() && tags.length > 10 && (
+            <div className="mt-3 text-center">
+              <button
+                onClick={() => setShowAllTags(!showAllTags)}
+                className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+              >
+                {showAllTags ? 'Show Less' : `Show All ${tags.length} Tags`}
+              </button>
+            </div>
+          )}
+
+          {/* No Results Message */}
+          {tagSearch.trim() && displayedTags.length === 0 && (
+            <div className="text-center py-4">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                No tags found matching &ldquo;{tagSearch}&rdquo;
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Archive Section */}
