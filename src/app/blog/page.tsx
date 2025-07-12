@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, Suspense } from 'react';
+import React, { useMemo, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Header from '../../components/Header';
@@ -15,21 +15,41 @@ function BlogContent() {
   const allPosts = getAllPosts();
   const tags = getAllTags();
   const archiveData = getArchiveData();
+  const [searchQuery, setSearchQuery] = useState('');
   
   const filteredPosts = useMemo(() => {
     const tag = searchParams.get('tag');
     const year = searchParams.get('year');
     const month = searchParams.get('month');
+    const showAll = searchParams.get('all') === 'true';
     
+    let posts = allPosts;
+    
+    // Apply filters from URL params
     if (tag) {
-      return getPostsByTag(tag);
+      posts = getPostsByTag(tag);
     } else if (year || month) {
       const yearNum = year ? parseInt(year) : undefined;
       const monthNum = month ? parseInt(month) : undefined;
-      return getPostsByDateRange(yearNum, monthNum);
+      posts = getPostsByDateRange(yearNum, monthNum);
     }
-    return allPosts;
-  }, [searchParams, allPosts]);
+    
+    // Apply search filter
+    if (searchQuery.trim()) {
+      posts = posts.filter(post => 
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+    
+    // Limit to 5 most recent posts if no filters are applied and showAll is not true
+    if (!tag && !year && !month && !searchQuery.trim() && !showAll) {
+      posts = posts.slice(0, 5);
+    }
+    
+    return posts;
+  }, [searchParams, allPosts, searchQuery]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,10 +68,46 @@ function BlogContent() {
 
       <BlogLayout tags={tags} archiveData={archiveData}>
         <>
+          {/* Search Bar */}
+          <div className="mb-8">
+            <div className="relative max-w-md mx-auto">
+              <input
+                type="text"
+                placeholder="Search blog posts..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-3 pl-12 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+              />
+              <svg
+                className="absolute left-4 top-3.5 h-5 w-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+
           <BlogFilters 
             totalPosts={allPosts.length} 
             filteredPosts={filteredPosts.length} 
           />
+          
+          {/* Show recent posts indicator or search results */}
+          {!searchParams.get('tag') && !searchParams.get('year') && !searchParams.get('month') && !searchQuery.trim() && !searchParams.get('all') && (
+            <div className="mb-6 text-center">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                Showing 5 most recent posts
+              </p>
+              <Link
+                href="/blog?all=true"
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium"
+              >
+                View all posts →
+              </Link>
+            </div>
+          )}
           
           <div className="space-y-8">
         {filteredPosts.length > 0 ? (

@@ -200,7 +200,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
           </h3>
           <div className="space-y-1">
             <Link
-              href="/blog"
+              href="/blog?all=true"
               className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               All Posts
