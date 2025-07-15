@@ -9,9 +9,19 @@ author: "Scott Van Gilder"
 
 ## Mastering Productivity with the GTD Method
 
+**[Get your copy of *Getting Things Done: The Art of Stress-Free Productivity* here](https://amzn.to/4lZBDQC)**
+
 Do you feel like there's too much to handle and not enough time to get it done? You're not alone. Most "to-do" lists are simply listings of stuff and fail to capture the REAL work that needs to be done. But what if I told you there's a system that can help you function productively with a clear head and a positive sense of control, even when you have an overwhelming number of things to do?
 
 Enter **Getting Things Done (GTD)** by David Allen—a methodology that has fundamentally transformed how I approach productivity in both my personal and professional life.
+
+### My Introduction to Getting Things Done
+
+About 10 years ago, my wife and I were driving home from Chicago on a long road trip. To pass the time, she suggested we listen to an audiobook she had picked up: *Getting Things Done: The Art of Stress-Free Productivity* by David Allen. I'll be honest—I was initially skeptical. Another productivity book? I'd tried various systems before with mixed results.
+
+But as we drove mile after mile, listening to David Allen's calm, methodical approach to managing life's complexities, something clicked. His methods weren't just another set of tips and tricks—they were a comprehensive philosophy for how to think about work and commitments. The more I listened, the more intrigued I became with his systematic approach to capturing, clarifying, and organizing everything that demands our attention.
+
+By the time we pulled into our driveway, I was convinced I needed to implement these methods into my own life. That road trip introduction to GTD became the foundation for a productivity system that has served me well for nearly a decade.
 
 ### The Problem with Traditional Productivity
 
