@@ -18,6 +18,7 @@ My personal website and blog built with Next.js, TypeScript, and Tailwind CSS. T
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Content**: Markdown with frontmatter
+- **Infrastructure**: AWS CDK (TypeScript)
 - **Deployment**: AWS S3 + CloudFront
 - **CI/CD**: GitHub Actions
 
@@ -25,6 +26,10 @@ My personal website and blog built with Next.js, TypeScript, and Tailwind CSS. T
 
 ```
 ├── content/blog/           # Blog posts in markdown format
+├── infrastructure/         # AWS CDK infrastructure code
+│   ├── lib/               # CDK stack definitions
+│   ├── bin/               # CDK app entry point
+│   └── import-resources.json # Resource import configuration
 ├── public/                 # Static assets (images, icons, etc.)
 ├── src/
 │   ├── app/               # Next.js app router pages
@@ -102,6 +107,61 @@ author: "Scott Van Gilder"
 - `npm run lint` - Run ESLint
 - `make help` - See all available Makefile commands
 
+## 🏗️ Infrastructure as Code (CDK)
+
+This project uses AWS CDK to manage infrastructure as code. All AWS resources (S3, CloudFront, IAM roles) are defined in TypeScript and can be deployed locally.
+
+### Prerequisites for Infrastructure Management
+
+- AWS CLI configured with admin permissions
+- AWS CDK CLI installed globally: `npm install -g aws-cdk`
+- AWS profile named `adminrole` with appropriate permissions
+
+### Infrastructure Commands
+
+```bash
+# See all available commands
+make help
+
+# Install CDK dependencies (first time setup)
+make infra-install
+
+# Preview infrastructure changes
+make infra-diff
+
+# Deploy infrastructure changes
+make infra-deploy
+
+# View generated CloudFormation template
+make infra-synth
+```
+
+### Infrastructure Components
+
+The CDK stack manages:
+
+- **S3 Bucket**: Static website hosting with security best practices
+  - Public access blocked
+  - Server-side encryption enabled
+  - Versioning with lifecycle rules
+- **CloudFront Distribution**: Global CDN with HTTPS redirect
+- **IAM Role**: GitHub Actions deployment role with OIDC authentication
+- **Security**: Comprehensive security headers and policies
+
+### Making Infrastructure Changes
+
+1. **Edit the CDK code**: Modify files in `infrastructure/lib/`
+2. **Preview changes**: `make infra-diff`
+3. **Deploy changes**: `make infra-deploy`
+4. **Commit changes**: Git commit your infrastructure code
+
+### Important Notes
+
+- Infrastructure is deployed locally using your `adminrole` AWS profile
+- GitHub Actions only deploys the application, not infrastructure
+- Always run `make infra-diff` before deploying to preview changes
+- Infrastructure changes require manual approval during deployment
+
 ## 🚀 Deployment
 
 The site automatically deploys to AWS S3/CloudFront via GitHub Actions when changes are pushed to the main branch.
@@ -131,10 +191,16 @@ You need to configure the following secrets in your GitHub repository:
 
 ## 📚 Documentation
 
+### Blog System
 - [Blog Setup Guide](BLOG_SETUP.md) - Detailed blog system documentation
 - [Blog Sync Guide](BLOG_SYNC_GUIDE.md) - How the automated sync works
 - [Blog Images Guide](BLOG_IMAGES_GUIDE.md) - Adding images to blog posts
 - [Blog Refactor Guide](BLOG_REFACTOR.md) - Complete system overview
+
+### Infrastructure
+- [CDK Import Guide](CDK_IMPORT_GUIDE.md) - How to import existing AWS resources
+- [Security Checklist](SECURITY_CHECKLIST.md) - Security best practices and checklist
+- [CloudFront Routing Fix](CLOUDFRONT_ROUTING_FIX.md) - Client-side routing configuration
 
 ## 🤝 Contributing
 
