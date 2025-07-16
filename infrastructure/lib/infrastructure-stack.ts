@@ -8,7 +8,7 @@ export interface InfrastructureStackProps extends cdk.StackProps {
 }
 
 export class InfrastructureStack extends cdk.Stack {
-  public readonly deploymentRole: iam.Role;
+  public readonly deploymentRole: iam.IRole;
 
   constructor(scope: Construct, id: string, props: InfrastructureStackProps) {
     super(scope, id, props);
@@ -103,46 +103,8 @@ export class InfrastructureStack extends cdk.Stack {
       },
     });
 
-    // IAM Role for GitHub Actions deployment with least privilege
-    this.deploymentRole = new iam.Role(this, 'GitHubActionsRole', {
-      roleName: `${props.domainName}-github-actions-role`,
-      assumedBy: new iam.WebIdentityPrincipal('arn:aws:iam::token.actions.githubusercontent.com:oidc-provider/token.actions.githubusercontent.com', {
-        StringEquals: {
-          'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
-        },
-        StringLike: {
-          'token.actions.githubusercontent.com:sub': 'repo:scottyvg/ScottVanGilder.com:*',
-        },
-      }),
-      description: 'Role for GitHub Actions to deploy to S3 and invalidate CloudFront',
-      maxSessionDuration: cdk.Duration.hours(1), // Security: Limit session duration
-    });
-
-    // Security: Least privilege policy for deployment
-    this.deploymentRole.addToPolicy(new iam.PolicyStatement({
-      effect: iam.Effect.ALLOW,
-      actions: [
-        's3:PutObject',
-        's3:PutObjectAcl',
-        's3:GetObject',
-        's3:DeleteObject',
-        's3:ListBucket',
-      ],
-      resources: [
-        `arn:aws:s3:::${props.domainName}`,
-        `arn:aws:s3:::${props.domainName}/*`,
-      ],
-    }));
-
-    this.deploymentRole.addToPolicy(new iam.PolicyStatement({
-      effect: iam.Effect.ALLOW,
-      actions: [
-        'cloudfront:CreateInvalidation',
-      ],
-      resources: [
-        `arn:aws:cloudfront::${this.account}:distribution/${distribution.ref}`,
-      ],
-    }));
+    // Reference existing GitHub Actions OIDC role
+    this.deploymentRole = iam.Role.fromRoleName(this, 'GitHubActionsRole', 'github-actions-scottvangilderDotCom');
 
     // Outputs for reference
     new cdk.CfnOutput(this, 'BucketName', {

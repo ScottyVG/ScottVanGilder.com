@@ -1,7 +1,7 @@
 {
   "ScottVanGilderWebsiteStack": {
     "BucketName": "scottvangilder.com",
-    "DeploymentRoleArn": "arn:aws:iam::937916641299:role/scottvangilder.com-github-actions-role",
+    "DeploymentRoleArn": "arn:aws:iam::937916641299:role/github-actions-scottvangilderDotCom",
     "DistributionId": "E256LY0L024L6G",
     "DistributionDomainName": "d19ccddgzs6m28.cloudfront.net"
   }
