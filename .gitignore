@@ -69,3 +69,11 @@ Thumbs.db
 
 # Security
 gitleaks-report.json
+/infrastructure/import-resources.json
+/infrastructure/node_modules
+
+# CDK build outputs
+/infrastructure/cdk.out
+/infrastructure/cdk-*.out
+/infrastructure/temp-synth*
+/infrastructure/outputs.json
