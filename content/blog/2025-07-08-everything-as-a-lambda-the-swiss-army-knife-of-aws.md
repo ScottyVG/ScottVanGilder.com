@@ -14,13 +14,11 @@ When most people think of AWS Lambda, they picture serverless APIs, cron jobs, o
 
 I call it “everything as a Lambda,” because there’s almost nothing you can’t wire up with a bit of code and a deployment.
 
-
 ## Lambda as the Glue
 
 The beauty of Lambda is that it can live in the middle of any process. Need to fetch data from an external API during your infrastructure deployment? Lambda can do it. Need to transform JSON payloads on the fly? Lambda’s your friend. Need to automate a tedious SDK operation that CloudFormation can’t handle? You guessed it—Lambda.
 
 In my work at AWS, I’ve ended up building quite a few Lambdas that exist solely to glue pieces of infrastructure together. They’re small, focused, and incredibly powerful.
-
 
 ## Real-World Use Cases
 
@@ -32,7 +30,6 @@ CloudFormation is fantastic—but it’s not omnipotent. There are plenty of AWS
 
 Recently, I built a Lambda custom resource that executes AWS SDK calls as part of a deployment. Instead of requiring someone to manually run a CLI command after deploying infrastructure, the custom resource handles it automatically, keeping deployments idempotent and repeatable.
 
-
 ### Certificate Generation and Integration
 
 Another fun use case was building a custom resource Lambda to integrate with an external certificate authority. We had an API that could vend custom certificates, and we needed to import those certs into AWS Certificate Manager (ACM) automatically. So I wrote a Lambda that:
@@ -42,7 +39,6 @@ Another fun use case was building a custom resource Lambda to integrate with an 
 * Registers them into ACM for use with our infrastructure
 
 This saved a ton of manual work and helped ensure that our deployments remained fully automated—even when integrating with services outside AWS.
-
 
 ## Why Lambda Fits So Well
 
@@ -56,7 +52,6 @@ Lambda is perfect for these jobs because:
 
 Plus, if you’re already using Infrastructure-as-Code tools like CDK, deploying a Lambda function as part of your stack is ridiculously simple.
 
-
 ## A Few Tips for “Everything as a Lambda”
 
 If you’re going to start solving all your odd jobs with Lambda, here are a few things I’ve learned:
@@ -66,11 +61,8 @@ If you’re going to start solving all your odd jobs with Lambda, here are a few
 * Handle errors and edge cases explicitly so you’re not left debugging failed deployments
 * Always test your custom resources thoroughly—they run during deployments, and failures there can leave your stack in a weird state
 
-
 ## Why I Love It
 
 For me, there’s a certain magic in knowing that if I hit a wall with AWS tooling, I can usually solve it by dropping in a few lines of code in a Lambda. It’s fast, flexible, and lets me get on with solving bigger problems without getting bogged down in workarounds or manual steps.
 
 So here’s to “everything as a Lambda.” Long may it reign.
-
-

@@ -91,3 +91,23 @@ a {
 .prose hr {
   @apply my-8 border-gray-300 dark:border-gray-600;
 }
+
+/* Import Tokyo Night theme for code blocks */
+@import '../styles/tokyo-night.css';
+
+/* Override prose styles for code blocks to ensure our custom styles work */
+.prose pre {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.prose pre code {
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}

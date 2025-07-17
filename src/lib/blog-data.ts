@@ -85,6 +85,24 @@ export const blogPosts: BlogPostMeta[] = [
       "Time Management"
     ],
     "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-16-importing-decade-old-aws-infrastructure-into-cdk-a-journey-from-clickops-to-infrastructure-as-code",
+    "title": "Importing Decade-Old AWS Infrastructure into CDK: A Journey from ClickOps to Infrastructure as Code",
+    "excerpt": "After 10+ years of managing my personal website infrastructure through the AWS console, I finally took the plunge into Infrastructure as Code using AWS CDK import. Here's the complete technical journey, including the challenges, solutions, and security improvements that came with modernizing legacy cloud resources.",
+    "date": "2025-07-16",
+    "readTime": "12 min read",
+    "tags": [
+      "AWS",
+      "CDK",
+      "Infrastructure as Code",
+      "DevOps",
+      "Security",
+      "CloudFormation",
+      "S3",
+      "CloudFront"
+    ],
+    "author": "Scott Van Gilder"
   }
 ];
 

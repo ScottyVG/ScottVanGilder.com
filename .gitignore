@@ -67,6 +67,9 @@ Thumbs.db
 *.temp
 *.log
 
+# Blog
+/content/blog-wip
+
 # Security
 gitleaks-report.json
 /infrastructure/import-resources.json

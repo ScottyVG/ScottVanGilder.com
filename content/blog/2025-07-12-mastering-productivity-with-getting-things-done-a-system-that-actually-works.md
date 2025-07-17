@@ -26,6 +26,7 @@ By the time we pulled into our driveway, I was convinced I needed to implement t
 ### The Problem with Traditional Productivity
 
 Think about the last time you were truly productive. You probably had:
+
 - A sense of control
 - Low stress levels  
 - High focus on what you were doing
@@ -33,6 +34,7 @@ Think about the last time you were truly productive. You probably had:
 - Progress toward meaningful outcomes
 
 Now contrast that with when you're out of that productive state. You might find yourself:
+
 - Starting to feel out of control
 - Stressed out
 - Unfocused
@@ -56,9 +58,11 @@ The water doesn't under-react or over-react. This is exactly how we should respo
 David Allen's Getting Things Done is built on two fundamental steps for achieving high-performance workflow:
 
 #### Step 1: Capture Everything
+
 Capture all the things that need to get done into a trusted system, outside of your head and off your mind. Your brain is for having ideas, not storing them.
 
 #### Step 2: Make Decisions
+
 Discipline yourself to make decisions about all the inputs you let into your life, so that you always have a plan about what the next actions are.
 
 ### The Five-Step GTD Workflow
@@ -66,18 +70,23 @@ Discipline yourself to make decisions about all the inputs you let into your lif
 The magic of GTD lies in its five-step process that creates a comprehensive system for managing all your commitments:
 
 #### 1. Capture
+
 Collect everything that has your attention into external collection tools. This means getting everything out of your head and into a trusted system where it can be processed later.
 
-#### 2. Clarify  
+#### 2. Clarify
+
 Process what each item means and what action, if any, is required. Ask yourself: "What is this?" and "Is it actionable?" If it's actionable, determine the very next physical action required.
 
 #### 3. Organize
+
 Put the results of your clarification into appropriate categories and places. This includes your calendar, next actions lists, project lists, and reference materials.
 
 #### 4. Reflect
+
 Review your system regularly to maintain perspective and make course corrections. This includes daily reviews of your calendar and action lists, plus weekly reviews of your entire system.
 
 #### 5. Engage
+
 Take action with confidence, knowing you're making the best choice of what to do in the moment based on your current context and available time and energy.
 
 ### The Power of Clarity

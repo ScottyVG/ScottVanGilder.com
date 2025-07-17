@@ -1,0 +1,331 @@
+/* Code Block Base Styling - Theme Adaptive */
+pre {
+  border-radius: 0.75rem !important;
+  padding: 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  overflow-x: auto !important;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  position: relative !important;
+}
+
+/* Dark Mode - Tokyo Night Theme */
+.dark pre {
+  background: #1a1b26 !important;
+  color: #a9b1d6 !important;
+  border: 1px solid #414868 !important;
+}
+
+/* Light Mode - Clean Light Theme */
+pre {
+  background: #f8f9fa !important;
+  color: #24292e !important;
+  border: 1px solid #e1e4e8 !important;
+}
+
+/* Code element inside pre */
+pre code {
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+}
+
+/* Dark Mode - Tokyo Night Color Scheme */
+.dark pre .hljs-comment,
+.dark pre .hljs-quote {
+  color: #565f89 !important;
+  font-style: italic;
+}
+
+.dark pre .hljs-keyword,
+.dark pre .hljs-selector-tag,
+.dark pre .hljs-subst {
+  color: #bb9af7 !important;
+}
+
+.dark pre .hljs-number,
+.dark pre .hljs-literal,
+.dark pre .hljs-variable,
+.dark pre .hljs-template-variable,
+.dark pre .hljs-tag .hljs-attr {
+  color: #ff9e64 !important;
+}
+
+.dark pre .hljs-string,
+.dark pre .hljs-doctag {
+  color: #9ece6a !important;
+}
+
+.dark pre .hljs-title,
+.dark pre .hljs-section,
+.dark pre .hljs-selector-id {
+  color: #7dcfff !important;
+}
+
+.dark pre .hljs-type,
+.dark pre .hljs-class .hljs-title,
+.dark pre .hljs-tag,
+.dark pre .hljs-name,
+.dark pre .hljs-attribute {
+  color: #7aa2f7 !important;
+}
+
+.dark pre .hljs-regexp,
+.dark pre .hljs-link {
+  color: #f7768e !important;
+}
+
+.dark pre .hljs-symbol,
+.dark pre .hljs-bullet {
+  color: #73daca !important;
+}
+
+.dark pre .hljs-built_in,
+.dark pre .hljs-builtin-name {
+  color: #e0af68 !important;
+}
+
+.dark pre .hljs-meta {
+  color: #565f89 !important;
+}
+
+.dark pre .hljs-deletion {
+  background: #f7768e !important;
+}
+
+.dark pre .hljs-addition {
+  background: #9ece6a !important;
+}
+
+.dark pre .hljs-emphasis {
+  font-style: italic;
+}
+
+.dark pre .hljs-strong {
+  font-weight: bold;
+}
+
+/* Light Mode - GitHub-style Color Scheme */
+pre .hljs-comment,
+pre .hljs-quote {
+  color: #6a737d !important;
+  font-style: italic;
+}
+
+pre .hljs-keyword,
+pre .hljs-selector-tag,
+pre .hljs-subst {
+  color: #d73a49 !important;
+}
+
+pre .hljs-number,
+pre .hljs-literal,
+pre .hljs-variable,
+pre .hljs-template-variable,
+pre .hljs-tag .hljs-attr {
+  color: #005cc5 !important;
+}
+
+pre .hljs-string,
+pre .hljs-doctag {
+  color: #032f62 !important;
+}
+
+pre .hljs-title,
+pre .hljs-section,
+pre .hljs-selector-id {
+  color: #6f42c1 !important;
+}
+
+pre .hljs-type,
+pre .hljs-class .hljs-title,
+pre .hljs-tag,
+pre .hljs-name,
+pre .hljs-attribute {
+  color: #22863a !important;
+}
+
+pre .hljs-regexp,
+pre .hljs-link {
+  color: #e36209 !important;
+}
+
+pre .hljs-symbol,
+pre .hljs-bullet {
+  color: #005cc5 !important;
+}
+
+pre .hljs-built_in,
+pre .hljs-builtin-name {
+  color: #e36209 !important;
+}
+
+pre .hljs-meta {
+  color: #6a737d !important;
+}
+
+pre .hljs-deletion {
+  background: #ffeef0 !important;
+  color: #cb2431 !important;
+}
+
+pre .hljs-addition {
+  background: #f0fff4 !important;
+  color: #22863a !important;
+}
+
+pre .hljs-emphasis {
+  font-style: italic;
+}
+
+pre .hljs-strong {
+  font-weight: bold;
+}
+
+/* Dark Mode - Language-specific styling */
+.dark pre .hljs-function {
+  color: #7dcfff !important;
+}
+
+.dark pre .hljs-params {
+  color: #e0af68 !important;
+}
+
+.dark pre .hljs-property {
+  color: #73daca !important;
+}
+
+.dark pre .hljs-value {
+  color: #9ece6a !important;
+}
+
+.dark pre .hljs-operator {
+  color: #89ddff !important;
+}
+
+.dark pre .hljs-attr {
+  color: #7dcfff !important;
+}
+
+.dark pre .hljs-selector-class {
+  color: #9ece6a !important;
+}
+
+.dark pre .hljs-selector-pseudo {
+  color: #bb9af7 !important;
+}
+
+/* Light Mode - Language-specific styling */
+pre .hljs-function {
+  color: #6f42c1 !important;
+}
+
+pre .hljs-params {
+  color: #24292e !important;
+}
+
+pre .hljs-property {
+  color: #005cc5 !important;
+}
+
+pre .hljs-value {
+  color: #032f62 !important;
+}
+
+pre .hljs-operator {
+  color: #d73a49 !important;
+}
+
+pre .hljs-attr {
+  color: #6f42c1 !important;
+}
+
+pre .hljs-selector-class {
+  color: #22863a !important;
+}
+
+pre .hljs-selector-pseudo {
+  color: #d73a49 !important;
+}
+
+/* Scrollbar styling for code blocks - Dark Mode */
+.dark pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.dark pre::-webkit-scrollbar-track {
+  background: #24283b;
+  border-radius: 4px;
+}
+
+.dark pre::-webkit-scrollbar-thumb {
+  background: #414868;
+  border-radius: 4px;
+}
+
+.dark pre::-webkit-scrollbar-thumb:hover {
+  background: #565f89;
+}
+
+/* Scrollbar styling for code blocks - Light Mode */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #f1f3f4;
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #c1c8cd;
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: #a8b2ba;
+}
+
+/* Copy button styling - Dark Mode */
+.dark .copy-button {
+  background: #414868 !important;
+  color: #a9b1d6 !important;
+}
+
+.dark .copy-button:hover {
+  background: #565f89 !important;
+  color: #ffffff !important;
+}
+
+.dark .copy-button:active {
+  background: #6f7bb6 !important;
+}
+
+/* Copy button styling - Light Mode */
+.copy-button {
+  background: #e1e4e8 !important;
+  color: #586069 !important;
+}
+
+.copy-button:hover {
+  background: #d1d5da !important;
+  color: #24292e !important;
+}
+
+.copy-button:active {
+  background: #c6cbd1 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tokyo-night-theme {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+  }
+}

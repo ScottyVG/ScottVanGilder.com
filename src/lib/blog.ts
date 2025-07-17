@@ -2,9 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
-import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
+import remarkRehype from 'remark-rehype';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
 
 const postsDirectory = path.join(process.cwd(), 'content/blog');
 
@@ -33,7 +36,13 @@ export async function markdownToHtml(markdown: string): Promise<string> {
   const result = await remark()
     .use(remarkGfm) // GitHub Flavored Markdown (tables, strikethrough, etc.)
     .use(remarkBreaks) // Convert line breaks to <br> tags
-    .use(html, { sanitize: false }) // Allow HTML in markdown
+    .use(remarkRehype, { allowDangerousHtml: true }) // Convert to rehype
+    .use(rehypeRaw) // Allow raw HTML
+    .use(rehypeHighlight, { 
+      detect: true,
+      subset: ['javascript', 'typescript', 'bash', 'json', 'yaml', 'markdown', 'css', 'html', 'python', 'sql']
+    }) // Syntax highlighting
+    .use(rehypeStringify) // Convert to HTML string
     .process(markdown);
   return result.toString();
 }
