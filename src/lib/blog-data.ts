@@ -96,6 +96,7 @@ export const blogPosts: BlogPostMeta[] = [
       "AWS",
       "CDK",
       "Infrastructure as Code",
+      "IaC",
       "DevOps",
       "Security",
       "CloudFormation",
