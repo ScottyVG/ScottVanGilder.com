@@ -104,6 +104,22 @@ export const blogPosts: BlogPostMeta[] = [
       "CloudFront"
     ],
     "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-29-containerized-data-science-why-docker-notebooks-solve-the-it-works-on-my-machine-problem",
+    "title": "Containerized Data Science: Why Docker Notebooks Solve the 'It Works on My Machine' Problem",
+    "excerpt": "Tired of Python environment hell and dependency conflicts in data science projects? Docker notebooks provide a clean, reproducible solution that eliminates the classic 'it works on my machine' problem. Here's how I set up a containerized Jupyter environment that just works, everywhere.",
+    "date": "2025-07-29",
+    "readTime": "6 minutes",
+    "tags": [
+      "Docker",
+      "Data Science",
+      "Python",
+      "Jupyter",
+      "DevOps",
+      "Machine Learning"
+    ],
+    "author": "Scott Van Gilder"
   }
 ];
 
