@@ -85,7 +85,42 @@ a {
 }
 
 .prose code {
-  @apply px-1 py-0.5 rounded text-sm;
+  @apply px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+/* Specific styling for inline code (not inside pre blocks) */
+.prose p code,
+.prose li code,
+.prose h1 code,
+.prose h2 code,
+.prose h3 code,
+.prose h4 code,
+.prose h5 code,
+.prose h6 code,
+.prose blockquote code {
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-1.5 py-0.5 rounded text-sm font-mono border border-gray-200 dark:border-gray-700;
+}
+
+/* Remove backticks from specific inline code contexts */
+.prose p code::before,
+.prose p code::after,
+.prose li code::before,
+.prose li code::after,
+.prose h1 code::before,
+.prose h1 code::after,
+.prose h2 code::before,
+.prose h2 code::after,
+.prose h3 code::before,
+.prose h3 code::after,
+.prose h4 code::before,
+.prose h4 code::after,
+.prose h5 code::before,
+.prose h5 code::after,
+.prose h6 code::before,
+.prose h6 code::after,
+.prose blockquote code::before,
+.prose blockquote code::after {
+  content: none !important;
 }
 
 .prose hr {
@@ -110,4 +145,15 @@ a {
   padding: 0 !important;
   border: none !important;
   border-radius: 0 !important;
+}
+
+/* Ensure inline code (not in pre blocks) gets proper styling */
+.prose code:not(pre code) {
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+/* Remove backticks added by Tailwind Typography plugin */
+.prose code::before,
+.prose code::after {
+  content: none !important;
 }
