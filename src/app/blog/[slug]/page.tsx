@@ -26,7 +26,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const archiveData = getArchiveData();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
       
       <main className="pt-20 pb-16">
@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               </Link>
             </div>
 
-            <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8">
+            <article className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-8">
               <header className="mb-8">
                 <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                   <time dateTime={post.date}>
@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     <Link
                       key={tag}
                       href={`/blog?tag=${encodeURIComponent(tag)}`}
-                      className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                      className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                     >
                       {tag}
                     </Link>
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6
                   prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline 
                   prose-strong:text-gray-900 dark:prose-strong:text-white 
-                  prose-code:text-gray-900 dark:prose-code:text-gray-100 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+                  prose-code:text-gray-900 dark:prose-code:text-gray-100 prose-code:bg-gray-200 dark:prose-code:bg-gray-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
                   prose-h1:mt-8 prose-h1:mb-6 prose-h1:leading-tight
                   prose-h2:mt-8 prose-h2:mb-4 prose-h2:leading-tight  
                   prose-h3:mt-6 prose-h3:mb-3 prose-h3:leading-tight

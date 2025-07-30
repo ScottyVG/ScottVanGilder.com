@@ -62,7 +62,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
       <div className="hidden lg:block">
         <button
           onClick={onToggleCollapse}
-          className={`flex items-center justify-center p-3 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm ${
+          className={`flex items-center justify-center p-3 text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-white dark:hover:bg-gray-700 shadow-sm ${
             enableAnimations ? 'transition-all duration-300' : ''
           } ${isCollapsed ? 'w-12 h-12' : 'w-full gap-2'}`}
           title={isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
@@ -91,7 +91,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
           : 'lg:max-h-[2000px] lg:opacity-100 lg:transform lg:scale-y-100'
       }`}>
         {/* Tags Section */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
             Browse by Tags
           </h3>
@@ -104,7 +104,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
                 placeholder="Search tags..."
                 value={tagSearch}
                 onChange={(e) => setTagSearch(e.target.value)}
-                className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-sm border border-gray-200 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white dark:focus:bg-gray-600 transition-colors"
               />
               <svg
                 className="absolute right-3 top-2.5 h-4 w-4 text-gray-400"
@@ -123,7 +123,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
               className={`px-3 py-1 text-sm rounded-full transition-colors ${
                 !currentTag
                   ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
-                  : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
             >
               All Posts
@@ -135,7 +135,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
                 className={`px-3 py-1 text-sm rounded-full transition-colors ${
                   currentTag === tag
                     ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
-                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                 }`}
               >
                 {tag} ({count})
@@ -166,7 +166,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
         </div>
 
         {/* Archive Section */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
             Archive
           </h3>
@@ -183,7 +183,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
                   className={`block px-3 py-2 text-sm rounded transition-colors ${
                     isActive
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
-                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
+                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
                   }`}
                 >
                   {monthNames[month - 1]} {year} ({count})
@@ -194,7 +194,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
         </div>
 
         {/* Quick Links */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
             Quick Links
           </h3>

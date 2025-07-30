@@ -76,7 +76,7 @@ function BlogContent() {
                 placeholder="Search blog posts..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 pl-12 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+                className="w-full px-4 py-3 pl-12 text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm focus:bg-white dark:focus:bg-gray-700 transition-colors"
               />
               <svg
                 className="absolute left-4 top-3.5 h-5 w-5 text-gray-400"
@@ -114,7 +114,7 @@ function BlogContent() {
           filteredPosts.map((post) => (
             <article
               key={post.slug}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow"
+              className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-6 hover:shadow-md hover:bg-white dark:hover:bg-gray-750 transition-all"
             >
                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
                  <time dateTime={post.date}>
@@ -142,7 +142,7 @@ function BlogContent() {
                     <Link
                       key={tag}
                       href={`/blog?tag=${encodeURIComponent(tag)}`}
-                      className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                      className="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                     >
                       {tag}
                     </Link>
@@ -180,7 +180,7 @@ function BlogContent() {
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
       
       <main className="pt-20 pb-16">
