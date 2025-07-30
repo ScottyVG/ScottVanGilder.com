@@ -120,6 +120,22 @@ export const blogPosts: BlogPostMeta[] = [
       "Machine Learning"
     ],
     "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-30-splitting-cdk-stacks-with-shared-constructs-and-config-files",
+    "title": "Splitting CDK Stacks with Shared Constructs and Config Files: From Monolith to Modular",
+    "excerpt": "After growing frustrated with bloated stacks and hardcoded values in my AWS CDK projects, I decided to refactor everything. What followed was a practical journey into stack modularization, reusability, and configuration management that fundamentally changed how I approach CDK design.",
+    "date": "2025-07-30",
+    "readTime": "8 min read",
+    "tags": [
+      "AWS",
+      "CDK",
+      "Infrastructure as Code",
+      "DevOps",
+      "Architecture",
+      "TypeScript"
+    ],
+    "author": "Scott Van Gilder"
   }
 ];
 
