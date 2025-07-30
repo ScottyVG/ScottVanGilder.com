@@ -64,17 +64,17 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, tags, archiveData }) 
   }
 
   return (
-    <div className={`grid grid-cols-1 gap-8 ${
-      enableAnimations ? 'transition-all duration-300 ease-in-out' : ''
-    } ${
+    <div className={`${
       isSidebarCollapsed 
-        ? 'lg:grid-cols-[auto_1fr]' 
-        : 'lg:grid-cols-4'
-    }`}>
+        ? 'relative' 
+        : 'grid grid-cols-1 lg:grid-cols-4 gap-8'
+    } ${enableAnimations ? 'transition-all duration-300 ease-in-out' : ''}`}>
       {/* Sidebar */}
-      <div className={`order-2 lg:order-1 ${
-        enableAnimations ? 'transition-all duration-300 ease-in-out' : ''
-      } ${isSidebarCollapsed ? 'lg:col-span-1' : 'lg:col-span-1'}`}>
+      <div className={`${
+        isSidebarCollapsed 
+          ? 'absolute left-0 top-0 z-10 lg:block hidden' 
+          : 'order-2 lg:order-1 lg:col-span-1'
+      } ${enableAnimations ? 'transition-all duration-300 ease-in-out' : ''}`}>
         <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded h-64"></div>}>
           <BlogSidebar 
             tags={tags} 
@@ -87,9 +87,11 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, tags, archiveData }) 
       </div>
 
       {/* Main Content */}
-      <div className={`order-1 lg:order-2 ${
-        enableAnimations ? 'transition-all duration-300 ease-in-out' : ''
-      } ${isSidebarCollapsed ? 'lg:col-span-1' : 'lg:col-span-3'}`}>
+      <div className={`${
+        isSidebarCollapsed 
+          ? 'w-full max-w-4xl mx-auto px-4' 
+          : 'order-1 lg:order-2 lg:col-span-3'
+      } ${enableAnimations ? 'transition-all duration-300 ease-in-out' : ''}`}>
         {children}
       </div>
     </div>  );
