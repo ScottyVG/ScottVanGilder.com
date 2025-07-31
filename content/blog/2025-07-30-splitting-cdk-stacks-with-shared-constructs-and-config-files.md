@@ -223,6 +223,19 @@ my-cdk-app/
 
 This structure makes it immediately clear where everything belongs and how the pieces fit together.
 
+## Demo Project
+
+To demonstrate the modular architecture concepts discussed in this post, I've created a complete example repository: [cdk-modular-stacks](https://github.com/ScottyVG/cdk-modular-stacks).
+
+This demo project showcases:
+- **Reusable Constructs**: Custom constructs for common AWS resources like DynamoDB tables, Lambda functions, and API Gateways
+- **Configuration Management**: Environment-specific TypeScript configuration files with proper typing
+- **Modular Stacks**: Separate stacks for database, API, and frontend resources with clear dependencies
+- **Testing Structure**: Unit tests for both constructs and stacks
+- **Deployment Scripts**: Automated deployment workflows for different environments
+
+The demo implements a simple serverless application with a DynamoDB backend, Lambda API, and S3-hosted frontend—all using the modular patterns described above. It serves as a practical reference for implementing similar architecture in your own CDK projects.
+
 ## Future Improvements
 
 While this architecture has served me well, there are always opportunities for enhancement:

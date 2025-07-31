@@ -126,34 +126,6 @@ This consistency extends beyond just getting code to run—it ensures that model
 
 Want to try a different version of TensorFlow? Or test with a newer version of scikit-learn? Just update the Dockerfile, rebuild the image, and you have a completely isolated environment to experiment in. If something breaks, you can always roll back to the previous working image.
 
-## Extending the Setup
-
-The beauty of this approach is how easily it extends. Need additional packages? Add them to the Dockerfile. Need GPU support? Switch to a CUDA-enabled base image. Need a specific Python version? Choose a different base image.
-
-Here are some common extensions I've used:
-
-### Adding Custom Packages
-
-```dockerfile
-# Add your project-specific requirements
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-```
-
-### GPU Support
-
-```dockerfile
-# Switch to GPU-enabled base image
-FROM jupyter/tensorflow-notebook:cuda-latest
-```
-
-### Custom Jupyter Extensions
-
-```dockerfile
-# Install useful Jupyter extensions
-RUN pip install jupyterlab-git nbextensions
-```
-
 ## A Few Gotchas I've Learned
 
 While Docker notebooks solve most environment problems, there are a few things to watch out for:
