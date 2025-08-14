@@ -136,6 +136,22 @@ export const blogPosts: BlogPostMeta[] = [
       "TypeScript"
     ],
     "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-14-building-llms-from-the-ground-up-understanding-embeddings",
+    "title": "Building LLMs from the Ground Up: Understanding Embeddings",
+    "excerpt": "Dive into the foundational concepts of Large Language Models by exploring how embeddings work. From converting text to vectors to understanding semantic relationships, learn the core building blocks that make modern AI language models possible.",
+    "date": "2025-08-14",
+    "readTime": "8 minutes",
+    "tags": [
+      "Machine Learning",
+      "AI",
+      "LLM",
+      "Embeddings",
+      "Neural Networks",
+      "Python"
+    ],
+    "author": "Scott Van Gilder"
   }
 ];
 
