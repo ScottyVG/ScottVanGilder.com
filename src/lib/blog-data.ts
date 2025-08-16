@@ -138,18 +138,17 @@ export const blogPosts: BlogPostMeta[] = [
     "author": "Scott Van Gilder"
   },
   {
-    "slug": "2025-08-14-building-llms-from-the-ground-up-understanding-embeddings",
-    "title": "Building LLMs from the Ground Up: Understanding Embeddings",
-    "excerpt": "Dive into the foundational concepts of Large Language Models by exploring how embeddings work. From converting text to vectors to understanding semantic relationships, learn the core building blocks that make modern AI language models possible.",
-    "date": "2025-08-14",
-    "readTime": "8 minutes",
+    "slug": "2025-08-16-terraform-best-practices-for-production-environments",
+    "title": "Terraform Best Practices for Production Environments",
+    "excerpt": "After years of debugging midnight infrastructure failures and untangling spaghetti Terraform code, I've learned that following proven patterns isn't just good practice—it's what keeps you sane. Here are the battle-tested approaches that have saved me countless hours and prevented production disasters.",
+    "date": "2025-08-16",
+    "readTime": "12 minutes",
     "tags": [
-      "Machine Learning",
-      "AI",
-      "LLM",
-      "Embeddings",
-      "Neural Networks",
-      "Python"
+      "Terraform",
+      "Infrastructure as Code",
+      "Best Practices",
+      "Production",
+      "DevOps"
     ],
     "author": "Scott Van Gilder"
   }
