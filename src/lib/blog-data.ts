@@ -151,6 +151,21 @@ export const blogPosts: BlogPostMeta[] = [
       "DevOps"
     ],
     "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-24-splitting-terraform-state-files-with-python-automation",
+    "title": "Splitting Terraform State Files with Python: Automating Infrastructure Organization",
+    "excerpt": "Learn how to use Python scripts to analyze Terraform state files and automatically separate resources into organized, maintainable state files for better infrastructure management.",
+    "date": "2025-08-24",
+    "readTime": "5 min read",
+    "tags": [
+      "terraform",
+      "python",
+      "devops",
+      "infrastructure",
+      "automation"
+    ],
+    "author": "Scott Van Gilder"
   }
 ];
 
