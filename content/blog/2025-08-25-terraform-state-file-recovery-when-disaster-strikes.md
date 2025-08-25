@@ -599,6 +599,3 @@ Remember:
 
 The scripts provided here can help automate both recovery and prevention, but the most important thing is having a recovery plan before you need it.
 
----
-
-*Have you experienced Terraform state disasters? What recovery strategies worked for you? Share your war stories and lessons learned in the comments below.*
