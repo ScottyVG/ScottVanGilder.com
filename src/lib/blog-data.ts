@@ -166,6 +166,21 @@ export const blogPosts: BlogPostMeta[] = [
       "automation"
     ],
     "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-25-terraform-state-file-recovery-when-disaster-strikes",
+    "title": "Terraform State File Recovery: When Disaster Strikes Your Infrastructure",
+    "excerpt": "Learn how to recover from corrupted, lost, or damaged Terraform state files using multiple recovery strategies, from backup restoration to rebuilding state from scratch.",
+    "date": "2025-08-25",
+    "readTime": "5 min read",
+    "tags": [
+      "terraform",
+      "devops",
+      "disaster-recovery",
+      "infrastructure",
+      "state-management"
+    ],
+    "author": "Scott Van Gilder"
   }
 ];
 

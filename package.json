@@ -22,7 +22,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "canvas": "^2.11.2",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.31",
+    "next": "^14.2.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rehype-highlight": "^7.0.2",
