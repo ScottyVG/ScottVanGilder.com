@@ -25,6 +25,210 @@ export const blogPosts: BlogPostMeta[] = [
       "Tech"
     ],
     "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-07-why-im-starting-this-blog",
+    "title": "Why I’m Starting This Blog (and Why Now)",
+    "excerpt": "I’m finally starting this blog to share my journey through tech, personal projects, and life. GenAI has helped me cut through the noise and just begin writing. Expect a stream of thoughts on cloud development, travel, and the outdoors—and maybe help others along the way. Thanks for joining me on this ride!",
+    "date": "2025-07-07",
+    "readTime": "3 min read",
+    "tags": [
+      "Blogging Journey",
+      "GenAI",
+      "DevOps",
+      "Tech"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-08-everything-as-a-lambda-the-swiss-army-knife-of-aws",
+    "title": "Everything as a Lambda: The Swiss Army Knife of AWS",
+    "excerpt": "AWS Lambda isn’t just for APIs—it’s my secret weapon for solving odd problems fast. From custom resource automation to integrating external services like certificate APIs, Lambda acts as my Swiss Army knife in the cloud. In this post, I share how “everything as a Lambda” helps me keep projects efficient, flexible, and fun.",
+    "date": "2025-07-08",
+    "readTime": "5 minutes",
+    "tags": [
+      "AWS Lambda",
+      "Serverless",
+      "AWS",
+      "DevOps",
+      "Tech"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-09-rebuilding-scottvangilder-com-from-static-html-to-modern-nextjs",
+    "title": "Rebuilding ScottVanGilder.com: From Static HTML to Modern Next.js - A Vibe Coding Journey",
+    "excerpt": "From bootcamp-era HTML/CSS to a modern Next.js blog with automated deployment - how I rebuilt my personal website in a single evening using AI-assisted development, and what I learned about the balance between GenAI productivity and deep technical understanding.",
+    "date": "2025-07-09",
+    "readTime": "8 min read",
+    "tags": [
+      "WebDev",
+      "NextJS",
+      "Gen AI",
+      "Personal Projects",
+      "AWS",
+      "DevOps",
+      "Tech"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-12-mastering-productivity-with-getting-things-done-a-system-that-actually-works",
+    "title": "Mastering Productivity with Getting Things Done: A System That Actually Works",
+    "excerpt": "Discover how David Allen's Getting Things Done methodology can transform your productivity and mental clarity. Learn the five-step workflow that has helped me achieve successful outcomes in both personal and professional life.",
+    "date": "2025-07-12",
+    "readTime": "8 min read",
+    "tags": [
+      "Productivity",
+      "GTD",
+      "Personal Development",
+      "Time Management"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-16-importing-decade-old-aws-infrastructure-into-cdk-a-journey-from-clickops-to-infrastructure-as-code",
+    "title": "Importing Decade-Old AWS Infrastructure into CDK: A Journey from ClickOps to Infrastructure as Code",
+    "excerpt": "After 10+ years of managing my personal website infrastructure through the AWS console, I finally took the plunge into Infrastructure as Code using AWS CDK import. Here's the complete technical journey, including the challenges, solutions, and security improvements that came with modernizing legacy cloud resources.",
+    "date": "2025-07-16",
+    "readTime": "12 min read",
+    "tags": [
+      "AWS",
+      "CDK",
+      "Infrastructure as Code",
+      "IaC",
+      "DevOps",
+      "Security",
+      "CloudFormation",
+      "S3",
+      "CloudFront"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-29-containerized-data-science-why-docker-notebooks-solve-the-it-works-on-my-machine-problem",
+    "title": "Containerized Data Science: Why Docker Notebooks Solve the 'It Works on My Machine' Problem",
+    "excerpt": "Tired of Python environment hell and dependency conflicts in data science projects? Docker notebooks provide a clean, reproducible solution that eliminates the classic 'it works on my machine' problem. Here's how I set up a containerized Jupyter environment that just works, everywhere.",
+    "date": "2025-07-29",
+    "readTime": "6 minutes",
+    "tags": [
+      "Docker",
+      "Data Science",
+      "Python",
+      "Jupyter",
+      "DevOps",
+      "Machine Learning"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-07-30-splitting-cdk-stacks-with-shared-constructs-and-config-files",
+    "title": "Splitting CDK Stacks with Shared Constructs and Config Files: From Monolith to Modular",
+    "excerpt": "After growing frustrated with bloated stacks and hardcoded values in my AWS CDK projects, I decided to refactor everything. What followed was a practical journey into stack modularization, reusability, and configuration management that fundamentally changed how I approach CDK design.",
+    "date": "2025-07-30",
+    "readTime": "8 min read",
+    "tags": [
+      "AWS",
+      "CDK",
+      "Infrastructure as Code",
+      "DevOps",
+      "Architecture",
+      "TypeScript"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-04-big-40-bigger-memories-our-quick-spain-extravaganza",
+    "title": "Big 40, Bigger Memories: Our Quick Spain Extravaganza - Seven Days of Sunshine, Tapas, and Art",
+    "excerpt": "Turning 40 felt like a milestone worth celebrating in style. My wife and I embarked on a whirlwind week-long tour of Spain, squeezing a lifetime of memories into seven unforgettable days of cobblestone streets, world-class museums, and enough tapas to fuel the next decade.",
+    "date": "2025-08-04",
+    "readTime": "10 min read",
+    "tags": [
+      "Travel",
+      "Spain",
+      "Personal",
+      "Adventure",
+      "Culture"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-14-building-llms-from-the-ground-up-understanding-embeddings",
+    "title": "Building LLMs from the Ground Up: Understanding Embeddings",
+    "excerpt": "Dive into the foundational concepts of Large Language Models by exploring how embeddings work. From converting text to vectors to understanding semantic relationships, learn the core building blocks that make modern AI language models possible.",
+    "date": "2025-08-14",
+    "readTime": "8 minutes",
+    "tags": [
+      "Machine Learning",
+      "AI",
+      "LLM",
+      "Embeddings",
+      "Neural Networks",
+      "Python"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-16-terraform-best-practices-for-production-environments",
+    "title": "Terraform Best Practices for Production Environments",
+    "excerpt": "After years of debugging midnight infrastructure failures and untangling spaghetti Terraform code, I've learned that following proven patterns isn't just good practice—it's what keeps you sane. Here are the battle-tested approaches that have saved me countless hours and prevented production disasters.",
+    "date": "2025-08-16",
+    "readTime": "12 minutes",
+    "tags": [
+      "Terraform",
+      "Infrastructure as Code",
+      "Best Practices",
+      "Production",
+      "DevOps"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-24-splitting-terraform-state-files-with-python-automation",
+    "title": "Splitting Terraform State Files with Python: Automating Infrastructure Organization",
+    "excerpt": "Learn how to use Python scripts to analyze Terraform state files and automatically separate resources into organized, maintainable state files for better infrastructure management.",
+    "date": "2025-08-24",
+    "readTime": "5 min read",
+    "tags": [
+      "terraform",
+      "python",
+      "devops",
+      "infrastructure",
+      "automation"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-08-25-terraform-state-file-recovery-when-disaster-strikes",
+    "title": "Terraform State File Recovery: When Disaster Strikes Your Infrastructure",
+    "excerpt": "Learn how to recover from corrupted, lost, or damaged Terraform state files using multiple recovery strategies, from backup restoration to rebuilding state from scratch.",
+    "date": "2025-08-25",
+    "readTime": "5 min read",
+    "tags": [
+      "terraform",
+      "devops",
+      "disaster-recovery",
+      "infrastructure",
+      "state-management"
+    ],
+    "author": "Scott Van Gilder"
+  },
+  {
+    "slug": "2025-09-15-getting-started-with-strands-agents-building-intelligent-cloud-applications",
+    "title": "Getting Started with Strands Agents: Building Intelligent Cloud Applications",
+    "excerpt": "Discover how to leverage Strands, the powerful Python AI agent framework, to build intelligent cloud applications that can reason, use tools, and interact with AWS services seamlessly.",
+    "date": "2025-09-15",
+    "readTime": "6 min read",
+    "tags": [
+      "Strands",
+      "AI Agents",
+      "AWS",
+      "Python",
+      "Machine Learning",
+      "Cloud Computing",
+      "Serverless"
+    ],
+    "author": "Scott Van Gilder"
   }
 ];
 
