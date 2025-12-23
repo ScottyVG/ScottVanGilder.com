@@ -1,7 +1,7 @@
 ---
 title: "Everyday Scripts That Actually Save Time: A Developer's Survival Kit"
 excerpt: "After years of collecting small productivity wins, I've built a toolkit of simple scripts that eliminate daily friction. From clipboard automation to git shortcuts, these aren't fancy tools—they're the boring utilities that make everything else flow better. Here's what I actually use and why you might want them too."
-date: "2025-10-22"
+date: "2025-10-23"
 readTime: "10 min read"
 tags: ["Productivity", "Scripts", "DevOps", "CLI", "Automation", "Developer Tools"]
 author: "Scott Van Gilder"
@@ -9,9 +9,9 @@ author: "Scott Van Gilder"
 
 ## Everyday Scripts That Actually Save Time
 
-I've been collecting small productivity hacks for years, and recently came across [Evan Hahn's excellent post](https://evanhahn.com/scripts-i-wrote-that-i-use-all-the-time/) about his personal toolkit. It got me thinking about my own collection of everyday utilities—the boring, unglamorous aliases and functions that quietly make everything flow better.
+I've been collecting small productivity hacks for years, building up a personal toolkit of everyday utilities—the boring, unglamorous aliases and functions that quietly make everything flow better.
 
-Unlike Evan's approach of creating standalone scripts, I've gravitated toward zsh aliases and functions that live in my shell configuration. These aren't groundbreaking innovations. They're solutions to tiny daily frictions that compound over time. The 5-second annoyance that happens 20 times a day. The three-command sequence you type constantly. The navigation patterns that become muscle memory.
+I've gravitated toward zsh aliases and functions that live in my shell configuration rather than standalone scripts. These aren't groundbreaking innovations. They're solutions to tiny daily frictions that compound over time. The 5-second annoyance that happens 20 times a day. The three-command sequence you type constantly. The navigation patterns that become muscle memory.
 
 After a decade of refining my shell environment, here's what actually stuck and why I chose aliases over scripts.
 
@@ -314,7 +314,7 @@ When you're navigating file systems, editing code, managing git repositories, an
 
 ### Everyday Tasks: Terminal vs Neovim
 
-The original post got me thinking about how I actually accomplish common development tasks. Some things are perfect for quick terminal aliases, while others benefit from Neovim's power. Here's how I approach different scenarios:
+This approach got me thinking about how I actually accomplish common development tasks. Some things are perfect for quick terminal aliases, while others benefit from Neovim's power. Here's how I approach different scenarios:
 
 ### Text Processing and JSON Formatting
 
@@ -358,7 +358,7 @@ echo "some text" | mdquote
 
 ### Line Number Navigation
 
-**Terminal**: The `line 10` script from the original post is clever, but `sed -n '10p' file` does the same thing.
+**Terminal**: A `line 10` script would be clever, but `sed -n '10p' file` does the same thing.
 
 **Neovim**: Just `:10` or `10G`. Want to see context around line 10? `:10 | normal! zz` centers it on screen.
 

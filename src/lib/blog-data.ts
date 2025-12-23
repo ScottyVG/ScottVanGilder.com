@@ -231,10 +231,10 @@ export const blogPosts: BlogPostMeta[] = [
     "author": "Scott Van Gilder"
   },
   {
-    "slug": "2025-10-22-everyday-scripts-that-actually-save-time",
+    "slug": "2025-10-23-everyday-scripts-that-actually-save-time",
     "title": "Everyday Scripts That Actually Save Time: A Developer's Survival Kit",
     "excerpt": "After years of collecting small productivity wins, I've built a toolkit of simple scripts that eliminate daily friction. From clipboard automation to git shortcuts, these aren't fancy tools—they're the boring utilities that make everything else flow better. Here's what I actually use and why you might want them too.",
-    "date": "2025-10-22",
+    "date": "2025-10-23",
     "readTime": "10 min read",
     "tags": [
       "Productivity",
