@@ -23,48 +23,55 @@ const Certifications: React.FC = () => {
         const mockCertifications: Certification[] = [
           {
             id: '1',
+            name: 'AWS Certified Generative AI Developer - Professional',
+            imageUrl: '/images/certifications/aws-certified-generative-ai-developer-professional.png',
+            issueDate: 'December 22, 2025',
+            credentialUrl: 'https://www.credly.com/badges/e1492b8c-aa6d-405c-ac08-010ce4e76921/public_url'
+          },
+          {
+            id: '2',
             name: 'AWS Certified DevOps Engineer - Professional',
             imageUrl: '/images/certifications/aws-certified-devops-engineer-professional.png',
             issueDate: 'November 18, 2023',
             credentialUrl: 'https://www.credly.com/badges/38abe909-3849-4067-9891-ecb6c64f8d3d/public_url'
           },
           {
-            id: '2',
+            id: '3',
             name: 'AWS Certified Machine Learning Engineer - Associate',
             imageUrl: '/images/certifications/aws-certified-machine-learning-engineer-associate.png',
             issueDate: 'January 23, 2025',
             credentialUrl: 'https://www.credly.com/badges/ba1c63b5-f866-4200-83b3-f4fc99a47df5/public_url'
           },
           {
-            id: '3',
+            id: '4',
             name: 'AWS Certified Solutions Architect - Associate',
             imageUrl: '/images/certifications/aws-certified-solutions-architect-associate.png',
             issueDate: 'October 10, 2021',
             credentialUrl: 'https://www.credly.com/badges/7d871eee-8ccb-471f-a704-fa64f547a621/public_url'
           },
           {
-            id: '4',
+            id: '5',
             name: 'AWS Certified SysOps Administrator - Associate',
             imageUrl: '/images/certifications/aws-certified-sysops-administrator-associate.png',
             issueDate: 'December 18, 2022',
             credentialUrl: 'https://www.credly.com/badges/bfc4e26d-2424-4205-89f8-7996403e5fec/public_url'
           },
           {
-            id: '5',
+            id: '6',
             name: 'AWS Certified Developer - Associate',
             imageUrl: '/images/certifications/aws-certified-developer-associate.png',
             issueDate: 'November 18, 2020',
             credentialUrl: 'https://www.credly.com/badges/a2915829-9292-4ae1-aa9c-27c6a9ab3713/public_url'
           },
           {
-            id: '6',
+            id: '7',
             name: 'AWS Certified Cloud Practitioner',
             imageUrl: '/images/certifications/aws-certified-cloud-practitioner.png',
             issueDate: 'September 27, 2019',
             credentialUrl: 'https://www.credly.com/badges/9448c693-8768-4edc-904d-ca9dffb3a864/public_url'
           },
           {
-            id: '7',
+            id: '8',
             name: 'AWS Certified AI Practitioner',
             imageUrl: '/images/certifications/aws-certified-ai-practitioner.png',
             issueDate: 'December 20, 2024',
