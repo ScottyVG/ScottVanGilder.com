@@ -80,3 +80,5 @@ gitleaks-report.json
 /infrastructure/cdk-*.out
 /infrastructure/temp-synth*
 /infrastructure/outputs.json
+
+.opencode/

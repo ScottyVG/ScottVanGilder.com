@@ -29,10 +29,6 @@ const Header: React.FC = () => {
             <Link href="/#certifications" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               Certifications
             </Link>
-            <Link href="/blog" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-              Blog
-            </Link>
-
             <Link href="/#contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
               Contact
             </Link>
@@ -78,14 +74,6 @@ const Header: React.FC = () => {
               >
                 Certifications
               </Link>
-              <Link 
-                href="/blog" 
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-2 py-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-
               <Link 
                 href="/#contact" 
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-2 py-1"
