@@ -1,4 +1,5 @@
 @tailwind base;
+@import '../styles/tokyo-night.css';
 @tailwind components;
 @tailwind utilities;
 
@@ -126,9 +127,6 @@ a {
 .prose hr {
   @apply my-8 border-gray-300 dark:border-gray-600;
 }
-
-/* Import Tokyo Night theme for code blocks */
-@import '../styles/tokyo-night.css';
 
 /* Override prose styles for code blocks to ensure our custom styles work */
 .prose pre {
