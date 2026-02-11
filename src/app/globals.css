@@ -1,5 +1,5 @@
-@tailwind base;
 @import '../styles/tokyo-night.css';
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
