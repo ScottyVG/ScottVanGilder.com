@@ -1,15 +1,13 @@
 # ScottVanGilder.com
 
-My personal website and blog built with Next.js, TypeScript, and Tailwind CSS. This is a modern, performant static site that showcases my work, thoughts on technology, and technical writing.
+My personal website built with Next.js, TypeScript, and Tailwind CSS. This is a modern, performant static site that showcases my work and experience.
 
 ## 🚀 Features
 
 - **Modern Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
-- **Blog System**: File-based markdown blog with automated data sync
 - **Responsive Design**: Mobile-first design that works on all devices
 - **Dark Mode**: Toggle between light and dark themes
 - **Performance**: 100/100 Lighthouse scores with static site generation
-- **Collapsible Sidebar**: Enhanced blog navigation with persistent state
 - **Automated Deployment**: CI/CD pipeline with GitHub Actions to AWS S3/CloudFront
 
 ## 🛠️ Tech Stack
@@ -17,7 +15,6 @@ My personal website and blog built with Next.js, TypeScript, and Tailwind CSS. T
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Content**: Markdown with frontmatter
 - **Infrastructure**: AWS CDK (TypeScript)
 - **Deployment**: AWS S3 + CloudFront
 - **CI/CD**: GitHub Actions
@@ -25,7 +22,6 @@ My personal website and blog built with Next.js, TypeScript, and Tailwind CSS. T
 ## 📁 Project Structure
 
 ```
-├── content/blog/           # Blog posts in markdown format
 ├── infrastructure/         # AWS CDK infrastructure code
 │   ├── lib/               # CDK stack definitions
 │   ├── bin/               # CDK app entry point
@@ -70,40 +66,10 @@ make dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📝 Writing Blog Posts
-
-### Using the Helper Script
-
-```bash
-node scripts/add-blog-post.js
-```
-
-This interactive script will:
-- Prompt for post details (title, excerpt, tags, etc.)
-- Create the markdown file with proper frontmatter
-- Automatically sync the blog data
-
-### Manual Creation
-
-1. Create a new `.md` file in `content/blog/`
-2. Add frontmatter:
-```yaml
----
-title: "Your Post Title"
-excerpt: "Brief description"
-date: "2025-01-09"
-readTime: "5 min read"
-tags: ["Tag1", "Tag2"]
-author: "Scott Van Gilder"
----
-```
-3. Run `npm run sync-blog` to update the blog index
-
 ## 🔧 Available Scripts
 
 - `npm run dev` - Start development server
-- `npm run build` - Build for production (includes blog sync)
-- `npm run sync-blog` - Sync blog data from markdown files
+- `npm run build` - Build for production
 - `npm run lint` - Run ESLint
 - `make help` - See all available Makefile commands
 
@@ -191,16 +157,9 @@ You need to configure the following secrets in your GitHub repository:
 
 ## 📚 Documentation
 
-### Blog System
-- [Blog Setup Guide](BLOG_SETUP.md) - Detailed blog system documentation
-- [Blog Sync Guide](BLOG_SYNC_GUIDE.md) - How the automated sync works
-- [Blog Images Guide](BLOG_IMAGES_GUIDE.md) - Adding images to blog posts
-- [Blog Refactor Guide](BLOG_REFACTOR.md) - Complete system overview
-
 ### Infrastructure
 - [CDK Import Guide](CDK_IMPORT_GUIDE.md) - How to import existing AWS resources
 - [Security Checklist](SECURITY_CHECKLIST.md) - Security best practices and checklist
-- [CloudFront Routing Fix](CLOUDFRONT_ROUTING_FIX.md) - Client-side routing configuration
 
 ## 🤝 Contributing
 
@@ -213,7 +172,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🔗 Links
 
 - **Live Site**: [scottvangilder.com](https://scottvangilder.com)
-- **Blog**: [scottvangilder.com/blog](https://scottvangilder.com/blog)
 - **LinkedIn**: [Scott Van Gilder](https://www.linkedin.com/in/scott-v-91065139/)
 
 ---
